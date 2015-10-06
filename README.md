@@ -1,4 +1,7 @@
-## 演習の環境設定手順
+# oracle.2015
+本リポジトリはDatabase2(オラクル)の授業に関する情報を共有するために使用する
+
+## オラクルサーバへの接続するための環境設定手順
 
 1. 「[Oracleインスタントクライアントのダウンロード](http://www.oracle.com/technetwork/jp/topics/index-099943-ja.html)から以下をダウンロードし、展開。<br />
 「instantclient_12_1」ディレクトリが作成されていることを確認

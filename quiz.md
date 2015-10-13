@@ -1,5 +1,28 @@
 # オラクル小テスト
 
+## 10/13
+
+1. 文字列「2011年01月01日」を日付値に変換し表示するSQL文を書いて下さい  
+1. 字列「￥5,000,000」を数値の「5000000」に変換し、12で割りさらにその値を  
+小数点以下で四捨五入し、表示するSQL文を書いて下さい  
+1. employees表からename, sal, comm,sal+comm（commがnullの場合はNVL関数を使用して0と見なす）  
+を表示するSQL文を書いて下さい  
+1. employees表からename, sal, comm, sal+comm（commがnullの場合はNVL2関数を使用して0と見なす）  
+を表示するSQL文を書いて下さい  
+1. employees表からename, sal, comm, sal+comm（commがnullの場合はCOALESCE関数を使用して0と見なす）  
+を表示するSQL文を書いて下さい  
+1. employees表からenameとCASE式を使って、deptnoが10の時は  
+salを1.1倍、20の時は1.2倍、それ以外はsalを表示する。  
+この時、計算結果の別名として、NEW_SALを表示するSQL文を書いて下さい  
+1. employees表からenameとDECODE関数を使って、deptnoが10の時は  
+salを1.1倍、20の時は1.2倍、それ以外はsalを表示する。  
+この時、計算結果の別名として、NEW_SALを表示するSQL文を書いて下さい  
+1. employees表からsalの平均と合計を表示するSQL文を書いて下さい  
+1. employees表からdeptno毎のdeptno、人数、salの平均を表示する。  
+この時、deptnoの昇順で、ソートするSQL文を書いて下さい  
+1. employees表からdeptno、job毎のdeptno、job、人数、salの平均  
+を表示する。この時、deptnoの昇順で、ソートするSQL文を書いて下さい  
+
 ## 10/8
 
 1. employees表でsalが「30万以上」かつdeptnoが「30」であるempno、ename、  

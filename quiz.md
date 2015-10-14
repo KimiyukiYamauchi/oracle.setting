@@ -1,5 +1,19 @@
 # オラクル小テスト
 
+## 10/15
+
+1. employees表からenameとCASE式を使って、deptnoが10の時は  
+salを1.1倍、20の時は1.2倍、それ以外はsalを表示する。  
+この時、計算結果の別名として、NEW_SALを表示するSQL文を書いて下さい  
+1. employees表からenameとDECODE関数を使って、deptnoが10の時は  
+salを1.1倍、20の時は1.2倍、それ以外はsalを表示する。  
+この時、計算結果の別名として、NEW_SALを表示するSQL文を書いて下さい  
+1. employees表からsalの平均と合計を表示するSQL文を書いて下さい  
+1. employees表からdeptno毎のdeptno、人数、salの平均を表示する。  
+この時、deptnoの昇順で、ソートするSQL文を書いて下さい  
+1. employees表からdeptno、job毎のdeptno、job、人数、salの平均  
+を表示する。この時、deptnoの昇順で、ソートするSQL文を書いて下さい  
+
 ## 10/14
 
 1. 文字列「2011年01月01日」を日付値に変換し表示するSQL文を書いて下さい  

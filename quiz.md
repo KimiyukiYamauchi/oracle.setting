@@ -1,5 +1,37 @@
 # オラクル小テスト
 
+## 10/20
+
+1. employees表からempnoが「1003」のsal（employees表から副問い合わせ)以上  
+のempno, ename, salを表示するSQL文を書いて下さい．  
+1. employees表からdnameが「営業」（departments表から副問い合わせ）の  
+empno, ename, deptnoを表示するSQL文を書いて下さい．  
+1. employees表からsalがempnoの「1003」以上（employees表から副問い合わせ）、  
+かつdnameが「営業」（departments表から副問い合わせ)のempno, ename, sal,  
+deptnoを表示するSQL文を書いて下さい．  
+1. employees表とdepartments表を結合(deptno)し、deptno,  
+dname毎のsalの平均が全体の平均（employees表から副問い合わせ）以上である  
+deptno, dname, avg(sal)を表示するSQL文を書いて下さい．  
+1. employees表を自己結合(empno, mgr)し、enameが「山田」または「伊藤」の上司(mgr)  
+(employees表から副問い合わせ)のempno, enameおよび上司のenameを表示する
+1. employees表からdeptnoが「10」または「20」のdeptno, empno,enameを表示する  
+select文とdeptnoが「20」または「30」のdeptno, empno,enameを表示するselect文  
+の問い合わせ結果を連結し、重複した行を排除して表示するSQL文を書いて下さい．  
+1. employees表からdeptnoが「10」または「20」のdeptno, empno,enameを表示する  
+select文とdeptnoが「20」または「30」のdeptno, empno,enameを表示するselect文  
+の問い合わせ結果を連結し、重複した行も含めて表示するSQL文を書いて下さい．  
+1. employees表からdeptnoが「10」または「20」のdeptno, empno,enameを表示する  
+select文とdeptnoが「20」または「30」のdeptno, empno,enameを表示するselect文  
+の問い合わせ結果を連結し、共通した行だけ表示するSQL文を書いて下さい．  
+1. employees表からdeptnoが「10」または「20」のdeptno, empno,enameを表示する  
+select文とdeptnoが「20」または「30」のdeptno, empno, enameを表示するselect文  
+の問い合わせ結果を連結し、１つめのselect文の結果のうち、２つ目の問い合わせ結果にない行を  
+表示するSQL文を書いて下さい．  
+1. employees表からdeptnoが「10」または「20」のdeptno, empno,enameを表示する  
+select文とdeptnoが「20」または「30」のdeptno, empno, enameを表示する  
+select文の問い合わせ結果を連結し、重複した行を排除して表示するSQL文を書いて下さい．  
+この時、empnoの昇順で並べて表示すること  
+
 ## 10/15
 
 1. employees表からdeptno毎のsalの平均の最大値を表示するSQL文を書いて下さい  

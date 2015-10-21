@@ -1,6 +1,14 @@
 # オラクル小テスト
 
-## 10/20
+## 10/22
+
+1. departments表にdeptno「50」、dname「教育」、loc「大手町」で、１行追加する  
+SQL文を書いて下さい．  
+1. 上記で追加した行を削除するSQL文を書いて下さい．  
+1. departments表にdeptno「60」、dname「経理」、locはnullで、１行追加追加する  
+SQL文を書いて下さい．  
+
+## 10/21
 
 1. employees表からempnoが「1003」のsal（employees表から副問い合わせ)以上  
 のempno, ename, salを表示するSQL文を書いて下さい．  
@@ -12,7 +20,7 @@ deptnoを表示するSQL文を書いて下さい．
 1. employees表とdepartments表を結合(deptno)し、deptno,  
 dname毎のsalの平均が全体の平均（employees表から副問い合わせ）以上である  
 deptno, dname, avg(sal)を表示するSQL文を書いて下さい．  
-1. employees表を自己結合(empno, mgr)し、enameが「山田」または「伊藤」の上司(mgr)  
+1. employees表を自己結合(empno, mgr)し、empnoが「山田」または「伊藤」の上司(mgr)  
 (employees表から副問い合わせ)のempno, enameおよび上司のenameを表示する
 1. employees表からdeptnoが「10」または「20」のdeptno, empno,enameを表示する  
 select文とdeptnoが「20」または「30」のdeptno, empno,enameを表示するselect文  

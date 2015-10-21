@@ -5,8 +5,22 @@
 1. departments表にdeptno「50」、dname「教育」、loc「大手町」で、１行追加する  
 SQL文を書いて下さい．  
 1. 上記で追加した行を削除するSQL文を書いて下さい．  
-1. departments表にdeptno「60」、dname「経理」、locはnullで、１行追加追加する  
+1. departments表にdeptno「60」、dname「経理」、locはnullで、１行追加する  
 SQL文を書いて下さい．  
+1. 上記で追加した行を削除するSQL文を書いて下さい．  
+1. employees表にempno, ename, hiredateを置換変数で入力し、その他はnullで  
+１行追加するSQL文を書いて下さい．  
+1. departments表と同一の表構造のdept2に対して、departments表からselect文を  
+使用してデータを取得し、deptno「deptno+1」、dname「dname」、loc「loc」のデータを追加  
+するSQL文を書いて下さい．  
+1. employees表のdeptnoがnullのデータについて、deptnoを「10」に更新する  
+SQL文を書いて下さい．  
+1. employees表のempnoが「1012」のデータについて、ename「林」、depto「20」に更新する  
+SQL文を書いて下さい．  
+1. employees表のempnoが「1013」および「1014」のデータについて、deptno「null」に更新する  
+SQL文を書いて下さい．  
+1. ロールバックを実行するSQL文を書いて下さい．  
+
 
 ## 10/21
 

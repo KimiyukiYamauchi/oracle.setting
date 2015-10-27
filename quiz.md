@@ -1,5 +1,33 @@
 # オラクル小テスト
 
+## 10/27
+
+1. 以下の操作を行うSQL文を書いて下さい．  
+	1. dept1表の作成
+		1. deptno, number(4), 主キー制約, 制約名：dept1_deptno_pk
+		1. dname varchar2(10), not null制約
+		1. loc, varchar2(10)
+	1. dept1表の削除
+1. 以下の操作を行うSQL文を書いて下さい．  
+	1. emp1表の作成  
+		1. empno, number(4), 主キー制約, 制約名：emp1_empno_pk  
+		1. ename, varchar2(10), not null制約, 制約名：emp1_ename_nn  
+		1. deptno, number(4), departments(deptno)への外部キー（参照整合性）制約, 制約名：emp1_dept1_deptno_fk  
+	1. emp1表の削除  
+1. 以下の操作を行うSQL文を書いて下さい．  
+	1. v_emp_deptビューの作成。employees表とdepartments表を結合し、deptnoが「10」のempno, ename, dnameを表示する
+	1. 上記ビューを使用し、select文を実行
+	1. 上記ビューを削除。
+1. 以下の操作を行うSQL文を書いて下さい．  
+	1. s_ord順序の作成
+	1. s_ord順序の増分値を10に変更
+	1. s_ord順序を削除
+1. 以下の操作を行うSQL文を書いて下さい．  
+	1. departments表に対して、dept_sシノニムを作成
+	1. select文を実行し、dept_sシノニムが正しく動作していることを確認
+	1. dept_sシノニムを削除
+
+
 ## 10/22
 
 1. departments表にdeptno「50」、dname「教育」、loc「大手町」で、１行追加する  

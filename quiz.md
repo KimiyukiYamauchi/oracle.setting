@@ -21,7 +21,54 @@
 	1. 主キーにより、行の重複は許されない
 	1. 各列には必ず値を入れなければないなら
 	1. データの格納順番がデータが戻される順番となる
-
+1. 以下のSELECT文が使う機能を選びなさい  
+<p>select empno, ename from emp where deptno=30;</p>
+	1. 射影、結合
+	1. 選択、結合
+	1. 射影、選択
+	1. 射影、選択、結合
+1. 表から全ての列を検索する方法を次の中から２つ選びなさい．
+	1. SELECT句でアスタリスク(*)を指定する
+	1. SELECT句でALLを指定する
+	1. SELECT句でDISTINCTを指定する
+	1. SELECT句で全ての列名をリストする
+1. 連結演算子で文字列NULLを連結すると結果はどうなるか．正しいもの  
+を選びなさい．
+	1. 文字列
+	1. スペース
+	1. エラー
+	1. NULL
+1. 以下に示すEMP表でSELECT文を実行する．エラーとなるSELECT文を２つ  
+選びなさい．  
+[EMP表の列構成]  
+EMPNO: 数値型  
+ENAME: 文字型  
+HIREDATE: 日付型(日付書式はデフォルト)
+	1. select empno, ename, hiredate, hdate from emp where  
+	hdate >= '01-JAN-98';
+	1. select empno, ename, hiredate from emp where  
+	HIREDATE >= '01-JAN-98';
+	1. select empno, ename, hiredate hdate from emp  
+	order by hdate;
+	1. select empno, ename, hiredate from emp where  
+	'01-JAN-98' < hiredate < '31-DEC-98';  
+1. HIREDATE列値が1998年4月1日である行を検索しない条件を選びなさい．  
+但し、日付書式はデフォルトとする．
+	1. where hiredate like '%98'
+	1. where hiredate > '01-JAN-98'
+	1. where hiredate between '01-JAN-98' and '01-JAN-99'
+	1. where hiredate not between '01-JAN-98' and '01-JAN-99'
+1. ID列の３文字目が文字絵列Mである行を検索する条件を選びなさい  
+	1. where id = '__M%'(Mの前にアンダスコア２文字)
+	1. where id like '__M%'(Mの前にアンダスコア２文字)
+	1. where id like '  M%'(Mの前に空白２文字)
+	1. where id like '%M%'
+1. ADAMSの職種(JOB列)はCLERK、給与(SAL列)は3000である  
+ADAMSの行が検索される条件を２つ選びなさい．
+	1. where job not in('SALESMAN', 'ACCOUNT')
+	1. where sal not between 2000 and 3000
+	1. where ename not like '%DAM'
+	1. where not job = 'CLERK' and sal = 3000
 
 ## 10/27
 

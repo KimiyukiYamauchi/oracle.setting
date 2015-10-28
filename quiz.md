@@ -13,6 +13,11 @@
 	1. 外部キーの値にNULL値は使えない
 	1. 表は行と列から構成される
 	1. 行と列の交差部分をフィールドと呼ぶ
+1. トランザクション制御文デないものを次の中から選びなさい．
+	1. SAVEPOINT
+	1. ROLLBACK
+	1. REVOKE
+	1. COMMIT
 1. リレーショナルデータベースに関する説明として誤っているものを  
 ３つ選びなさい
 	1. 表では、１件のまとまった情報は１行に格納される
@@ -21,6 +26,11 @@
 	1. 主キーにより、行の重複は許されない
 	1. 各列には必ず値を入れなければないなら
 	1. データの格納順番がデータが戻される順番となる
+1. SQL Developerに関する説明として誤っている物を選びなさい．
+	1. 開発の生産性を向上させるグラフィカルツールである
+	1. インストーラは必要ない
+	1. javaで開発されている
+	1. リリース11.1.0以降のOracle Databaseに接続できる
 1. 以下のSELECT文が使う機能を選びなさい  
 <p>select empno, ename from emp where deptno=30;</p>
 	1. 射影、結合
@@ -38,37 +48,18 @@
 	1. スペース
 	1. エラー
 	1. NULL
-1. 以下に示すEMP表でSELECT文を実行する．エラーとなるSELECT文を２つ  
-選びなさい．  
-[EMP表の列構成]  
-EMPNO: 数値型  
-ENAME: 文字型  
-HIREDATE: 日付型(日付書式はデフォルト)
-	1. select empno, ename, hiredate, hdate from emp where  
-	hdate >= '01-JAN-98';
-	1. select empno, ename, hiredate from emp where  
-	HIREDATE >= '01-JAN-98';
-	1. select empno, ename, hiredate hdate from emp  
-	order by hdate;
-	1. select empno, ename, hiredate from emp where  
-	'01-JAN-98' < hiredate < '31-DEC-98';  
-1. HIREDATE列値が1998年4月1日である行を検索しない条件を選びなさい．  
-但し、日付書式はデフォルトとする．
-	1. where hiredate like '%98'
-	1. where hiredate > '01-JAN-98'
-	1. where hiredate between '01-JAN-98' and '01-JAN-99'
-	1. where hiredate not between '01-JAN-98' and '01-JAN-99'
-1. ID列の３文字目が文字絵列Mである行を検索する条件を選びなさい  
-	1. where id = '__M%'(Mの前にアンダスコア２文字)
-	1. where id like '__M%'(Mの前にアンダスコア２文字)
-	1. where id like '  M%'(Mの前に空白２文字)
-	1. where id like '%M%'
-1. ADAMSの職種(JOB列)はCLERK、給与(SAL列)は3000である  
-ADAMSの行が検索される条件を２つ選びなさい．
-	1. where job not in('SALESMAN', 'ACCOUNT')
-	1. where sal not between 2000 and 3000
-	1. where ename not like '%DAM'
-	1. where not job = 'CLERK' and sal = 3000
+1. 文字リテラルTeacher's Petの指定方法として正しいものを2つ選びなさい．  
+	1. 'Teacher''s Pet'
+	1. q'Teacher's Pet'
+	1. q'%Teacher's Pet%'
+	1. q'(Teacher''s Pet)'
+1. 次の中から、エラーとなるDISTINCTおよびUNIQUEキーワードの使い方  
+を選びなさい  
+	1. select distinct job from emp;
+	1. select distinct job distinct deptno from emp;
+	1. select distinct job, deptno from emp;
+	1. select unique * from emp;
+
 
 ## 10/27
 

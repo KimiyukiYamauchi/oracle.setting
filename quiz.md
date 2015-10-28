@@ -6,18 +6,21 @@
 	1. ２次元の表形式
 	1. 階層型データ構造
 	1. ツリー形式
-	1. ネットワーク構造
+	1. ネットワーク構造  
+=> ⅰ
 1. リレーショナルデータベースに関する説明として誤っているものを  
 選びなさい．
 	1. 主キーの値にNULL値は使えない
 	1. 外部キーの値にNULL値は使えない
 	1. 表は行と列から構成される
-	1. 行と列の交差部分をフィールドと呼ぶ
+	1. 行と列の交差部分をフィールドと呼ぶ  
+	=> ⅱ
 1. トランザクション制御文デないものを次の中から選びなさい．
 	1. SAVEPOINT
 	1. ROLLBACK
 	1. REVOKE
-	1. COMMIT
+	1. COMMIT  
+	=> ⅲ
 1. リレーショナルデータベースに関する説明として誤っているものを  
 ３つ選びなさい
 	1. 表では、１件のまとまった情報は１行に格納される
@@ -25,40 +28,47 @@
 	である
 	1. 主キーにより、行の重複は許されない
 	1. 各列には必ず値を入れなければないなら
-	1. データの格納順番がデータが戻される順番となる
+	1. データの格納順番がデータが戻される順番となる  
+	=> ⅱ,ⅳ,ⅴ
 1. SQL Developerに関する説明として誤っている物を選びなさい．
 	1. 開発の生産性を向上させるグラフィカルツールである
 	1. インストーラは必要ない
 	1. javaで開発されている
-	1. リリース11.1.0以降のOracle Databaseに接続できる
+	1. リリース11.1.0以降のOracle Databaseに接続できる  
+	=> ⅳ
 1. 以下のSELECT文が使う機能を選びなさい  
 <p>select empno, ename from emp where deptno=30;</p>
 	1. 射影、結合
 	1. 選択、結合
 	1. 射影、選択
-	1. 射影、選択、結合
+	1. 射影、選択、結合  
+	=> ⅲ
 1. 表から全ての列を検索する方法を次の中から２つ選びなさい．
 	1. SELECT句でアスタリスク(*)を指定する
 	1. SELECT句でALLを指定する
 	1. SELECT句でDISTINCTを指定する
-	1. SELECT句で全ての列名をリストする
+	1. SELECT句で全ての列名をリストする  
+	=> ⅰ,ⅳ
 1. 連結演算子で文字列NULLを連結すると結果はどうなるか．正しいもの  
 を選びなさい．
 	1. 文字列
 	1. スペース
 	1. エラー
-	1. NULL
+	1. NULL  
+	=> ⅰ
 1. 文字リテラルTeacher's Petの指定方法として正しいものを2つ選びなさい．  
 	1. 'Teacher''s Pet'
 	1. q'Teacher's Pet'
 	1. q'%Teacher's Pet%'
-	1. q'(Teacher''s Pet)'
+	1. q'(Teacher''s Pet)'  
+	=> ⅰ,ⅲ
 1. 次の中から、エラーとなるDISTINCTおよびUNIQUEキーワードの使い方  
 を選びなさい  
 	1. select distinct job from emp;
 	1. select distinct job distinct deptno from emp;
 	1. select distinct job, deptno from emp;
-	1. select unique * from emp;
+	1. select unique * from emp;  
+	=> ⅱ
 
 
 ## 10/27

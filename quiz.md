@@ -1,5 +1,90 @@
 # オラクル小テスト
 
+## 10/29
+
+1. 以下に示すEMP表でSELECT文を実行する．エラーとなるSELECT文を２つ  
+選びなさい．  
+[EMP表の列構成]  
+EMPNO: 数値型  
+ENAME: 文字型  
+HIREDATE: 日付型(日付書式はデフォルト)
+	1. select empno, ename, hiredate hdate from emp where  
+	hdate >= '01-JAN-98';
+	1. select empno, ename, hiredate from emp where  
+	HIREDATE >= '01-JAN-98';
+	1. select empno, ename, hiredate hdate from emp  
+	order by hdate;
+	1. select empno, ename, hiredate from emp where  
+	'01-JAN-98' < hiredate < '31-DEC-98';  
+	<br>
+1. HIREDATE列値が1998年4月1日である行を検索しない条件を選びなさい．  
+但し、日付書式はデフォルトとする．
+	1. where hiredate like '%98'
+	1. where hiredate > '01-JAN-98'
+	1. where hiredate between '01-JAN-98' and '01-JAN-99'
+	1. where hiredate not between '01-JAN-98' and '01-JAN-99'  
+	<br>
+1. ID列の３文字目が文字列Mである行を検索する条件を選びなさい  
+	1. where id = '__M%'(Mの前にアンダスコア２文字)
+	1. where id like '__M%'(Mの前にアンダスコア２文字)
+	1. where id like '□□M%'(Mの前に空白２文字)
+	1. where id like '%M%'  
+	<br>
+1. ADAMSの職種(JOB列)はCLERK、給与(SAL列)は3000である  
+ADAMSの行が検索される条件を２つ選びなさい．
+	1. where job not in('SALESMAN', 'ACCOUNT')
+	1. where sal not between 2000 and 3000
+	1. where ename not like '%DAM'
+	1. where not job = 'CLERK' and sal = 3000  
+	<br>
+1. 以下のWHERE句と条件の同じものを選びなさい  
+<p>where not deptno >= 20 and job = 'CLERK'</p>
+	1. where not (deptno  >= 20 and job = 'CLERK')
+	1. where deptno < 20 and job<> 'CLERK'
+	1. where deptno <= 20 and job = 'CLERK'
+	1. where deotno < 20 and job = 'CLERK'  
+	<br>
+1. EMP表のCOMM列には、100、200、NULL、180の値がそれぞれ設定  
+されている．以下のSELECT文を実行すると何件のデータが検索されるか．  
+<p>select * from emp where comm <> 200;</p>
+	1. 0
+	1. 1
+	1. 2
+	1. 3  
+	<br>
+1. 以下のWHERE句の条件と同じものを選びなさい．
+<p>where job in('CLERK', 'ACCOUNT')
+	1. where job between 'CLERK' and 'ACCOUNT'
+	1. where job = 'CLERK' or job = 'ACCOUNT'
+	1. where job = 'CLERK' and job = 'ACCOUNT'
+	1. where not job = 'CLERK' and not job = 'ACCOUNT'  
+	<br>
+1. 部門番号(DEPTNO列)の昇順に、さらに社員番号(EMPNO列)の昇順  
+にソートする．正しいSELECT文を全て選びなさい．
+	1. select ename from emp order by deptno, empno;
+	1. select deptno, empno, ename from emp order by 1, 2;
+	1. select deptno, empno, ename from emp  
+	order by empno asc, deptno asc;
+	1. select deptno, empno, ename from emp order by 1, empno;  
+	<br>
+1. 置換変数名の先頭に付ける記号として正しいものを2つ選びなさい
+	1. %
+	1. &
+	1. @
+	1. &&  
+	<br>
+1. スクリプトファイルの中で以下のSQL文を使っている．スクリプトファイルの実行結果に関する  
+説明として正しいものを2つ選びなさい．
+<p>select empno, ename, sal from emp where empno = &EMPNO;<br>
+update emp set sal = sal*1.2 where empno = &empno;</p>
+	1. スクリプトファイル実行時に、&EMPNOの値を入力するように毎回表示される
+	1. スクリプトファイルを最初に実行した時だけ、&EMPNOの値を  
+	入力するよう表示される
+	1. DEFINEコマンドでEMPNOの値を事前に定義すれば、スクリプトファイル実行時に&EMPNO  
+	に対する入力要求は表示されない
+	1. select文の&EMPNOの入力要求によって入力した値は、UPDATE文の&empnoに引き継がれる  
+<br>
+
 ## 10/28
 
 1. リレーショナルデータベースのデータの格納形式を選びなさい．

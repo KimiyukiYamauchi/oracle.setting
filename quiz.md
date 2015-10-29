@@ -17,6 +17,8 @@ HIREDATE: 日付型(日付書式はデフォルト)
 	1. select empno, ename, hiredate from emp where  
 	'01-JAN-98' < hiredate < '31-DEC-98';  
 	<br>
+	=> 1, 4  
+	<br>
 1. HIREDATE列値が1998年4月1日である行を検索しない条件を選びなさい．  
 但し、日付書式はデフォルトとする．
 	1. where hiredate like '%98'
@@ -24,11 +26,15 @@ HIREDATE: 日付型(日付書式はデフォルト)
 	1. where hiredate between '01-JAN-98' and '01-JAN-99'
 	1. where hiredate not between '01-JAN-98' and '01-JAN-99'  
 	<br>
+	=> 4  
+	<br>
 1. ID列の３文字目が文字列Mである行を検索する条件を選びなさい  
 	1. where id = '__M%'(Mの前にアンダスコア２文字)
 	1. where id like '__M%'(Mの前にアンダスコア２文字)
 	1. where id like '□□M%'(Mの前に空白２文字)
 	1. where id like '%M%'  
+	<br>
+	=> 2  
 	<br>
 1. ADAMSの職種(JOB列)はCLERK、給与(SAL列)は3000である  
 ADAMSの行が検索される条件を２つ選びなさい．
@@ -37,12 +43,16 @@ ADAMSの行が検索される条件を２つ選びなさい．
 	1. where ename not like '%DAM'
 	1. where not job = 'CLERK' and sal = 3000  
 	<br>
+	=> 1, 3  
+	<br>
 1. 以下のWHERE句と条件の同じものを選びなさい  
 <p>where not deptno >= 20 and job = 'CLERK'</p>
 	1. where not (deptno  >= 20 and job = 'CLERK')
 	1. where deptno < 20 and job<> 'CLERK'
 	1. where deptno <= 20 and job = 'CLERK'
 	1. where deotno < 20 and job = 'CLERK'  
+	<br>
+	=> 4  
 	<br>
 1. EMP表のCOMM列には、100、200、NULL、180の値がそれぞれ設定  
 されている．以下のSELECT文を実行すると何件のデータが検索されるか．  
@@ -52,12 +62,16 @@ ADAMSの行が検索される条件を２つ選びなさい．
 	1. 2
 	1. 3  
 	<br>
+	=> 3  
+	<br>
 1. 以下のWHERE句の条件と同じものを選びなさい．
-<p>where job in('CLERK', 'ACCOUNT')
+<p>where job in('CLERK', 'ACCOUNT')</p>
 	1. where job between 'CLERK' and 'ACCOUNT'
 	1. where job = 'CLERK' or job = 'ACCOUNT'
 	1. where job = 'CLERK' and job = 'ACCOUNT'
 	1. where not job = 'CLERK' and not job = 'ACCOUNT'  
+	<br>
+	=> 2  
 	<br>
 1. 部門番号(DEPTNO列)の昇順に、さらに社員番号(EMPNO列)の昇順  
 にソートする．正しいSELECT文を全て選びなさい．
@@ -67,11 +81,15 @@ ADAMSの行が検索される条件を２つ選びなさい．
 	order by empno asc, deptno asc;
 	1. select deptno, empno, ename from emp order by 1, empno;  
 	<br>
+	=> 1, 2, 4  
+	<br>
 1. 置換変数名の先頭に付ける記号として正しいものを2つ選びなさい
 	1. %
 	1. &
 	1. @
 	1. &&  
+	<br>
+	=> 2, 4  
 	<br>
 1. スクリプトファイルの中で以下のSQL文を使っている．スクリプトファイルの実行結果に関する  
 説明として正しいものを2つ選びなさい．
@@ -84,6 +102,8 @@ update emp set sal = sal*1.2 where empno = &empno;</p>
 	に対する入力要求は表示されない
 	1. select文の&EMPNOの入力要求によって入力した値は、UPDATE文の&empnoに引き継がれる  
 <br>
+=> 1, 3  
+<br>
 
 ## 10/28
 
@@ -92,20 +112,26 @@ update emp set sal = sal*1.2 where empno = &empno;</p>
 	1. 階層型データ構造
 	1. ツリー形式
 	1. ネットワーク構造  
-=> ⅰ
+	<br>
+=> 1  
+<br>
 1. リレーショナルデータベースに関する説明として誤っているものを  
 選びなさい．
 	1. 主キーの値にNULL値は使えない
 	1. 外部キーの値にNULL値は使えない
 	1. 表は行と列から構成される
 	1. 行と列の交差部分をフィールドと呼ぶ  
-	=> ⅱ
-1. トランザクション制御文デないものを次の中から選びなさい．
+	<br>
+	=> 2  
+	<br>
+1. トランザクション制御文でないものを次の中から選びなさい．
 	1. SAVEPOINT
 	1. ROLLBACK
 	1. REVOKE
 	1. COMMIT  
-	=> ⅲ
+	<br>
+	=> 3  
+	<br>
 1. リレーショナルデータベースに関する説明として誤っているものを  
 ３つ選びなさい
 	1. 表では、１件のまとまった情報は１行に格納される
@@ -114,46 +140,60 @@ update emp set sal = sal*1.2 where empno = &empno;</p>
 	1. 主キーにより、行の重複は許されない
 	1. 各列には必ず値を入れなければないなら
 	1. データの格納順番がデータが戻される順番となる  
-	=> ⅱ,ⅳ,ⅴ
+	<br>
+	=> 2, 4, 5  
+	<br>
 1. SQL Developerに関する説明として誤っている物を選びなさい．
 	1. 開発の生産性を向上させるグラフィカルツールである
 	1. インストーラは必要ない
 	1. javaで開発されている
 	1. リリース11.1.0以降のOracle Databaseに接続できる  
-	=> ⅳ
+	<br>
+	=> 4  
+	<br>
 1. 以下のSELECT文が使う機能を選びなさい  
 <p>select empno, ename from emp where deptno=30;</p>
 	1. 射影、結合
 	1. 選択、結合
 	1. 射影、選択
 	1. 射影、選択、結合  
-	=> ⅲ
+	<br>
+	=> 3  
+	<br>
 1. 表から全ての列を検索する方法を次の中から２つ選びなさい．
 	1. SELECT句でアスタリスク(*)を指定する
 	1. SELECT句でALLを指定する
 	1. SELECT句でDISTINCTを指定する
 	1. SELECT句で全ての列名をリストする  
-	=> ⅰ,ⅳ
+	<br>
+	=> 1, 4  
+	<br>
 1. 連結演算子で文字列NULLを連結すると結果はどうなるか．正しいもの  
 を選びなさい．
 	1. 文字列
 	1. スペース
 	1. エラー
 	1. NULL  
-	=> ⅰ
+	<br>
+	=> 1  
+	<br>
 1. 文字リテラルTeacher's Petの指定方法として正しいものを2つ選びなさい．  
 	1. 'Teacher''s Pet'
 	1. q'Teacher's Pet'
 	1. q'%Teacher's Pet%'
 	1. q'(Teacher''s Pet)'  
-	=> ⅰ,ⅲ
+	<br>
+	=> 1, 3  
+	<br>
 1. 次の中から、エラーとなるDISTINCTおよびUNIQUEキーワードの使い方  
 を選びなさい  
 	1. select distinct job from emp;
 	1. select distinct job distinct deptno from emp;
 	1. select distinct job, deptno from emp;
 	1. select unique * from emp;  
-	=> ⅱ
+	<br>
+	=> 2  
+	<br>
 
 
 ## 10/27

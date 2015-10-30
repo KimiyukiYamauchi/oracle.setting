@@ -1,5 +1,130 @@
 # オラクル小テスト
 
+## 11/4
+
+1. 単一行関数に関する説明として誤っているものをすべて選びなさい．
+
+	1. 問い合わせから戻される各行を操作する
+	1. ネストの深さに制限はない
+	1. WHERE句で使用できない
+	1. 1行ごとに1つの結果を戻す
+	1. 引数に指定できるのは列名か定数のみである
+	1. 入力したデータと同じデータ型の値を必ず戻す
+
+1. 以下のSELECT文の実行結果として正しいものを選びなさい．
+
+	【EMP表】(FIRST_NAME列、LAST_NAME列ともVARCHAR2型)
+
+	|EMPNO|FIRST\_NAME|LAST_NAME|
+	|:----|:----------|:--------|
+	|1000 |SCOTT      |TIGER    |
+
+	select empno, concat(first_name, last_name),  
+	length(last_name),instr(first_name, 'T'),substr(last_name,2,3)  
+	substr(first_name,-2) from emp where empno=1000;
+
+	1. 1000 SCOTTTIGER 4 4 IG T
+	1. 1000 SCOTTTIGER 5 4 IG I GER
+	1. 1000 SCOTTTIGER 5 4 IGE TT
+	1. 1000 SCOTTTIGER 4 2 IG TT
+
+1. 次の数値関数の結果の中から正しい物を2つ選びなさい
+
+	1. ROUND(320.125,2)の結果は320.13である
+	1. MOD(1600,300)の結果は300である
+	1. TRUNC(320.125)の結果は320である
+	1. ROUND(320.125,-3)の結果は300である
+	1. MOD(TRUNC(ROOUND(320.125,0),-1),100)の結果は0である
+
+1. 次の中からエラーとなる日付関数の指定方法を選びなさい．ただし、  
+日付書式はYYYY-MM-DDとする．
+
+	1. LAST_DAY('2002-02-01','2002-03-31')
+	1. ADD_MONTHS('2002-09-15',-3)
+	1. NEXT_DAY('2002-08-31','SUNDAY')
+	1. NEXT_DAY('2002-08-31',3)
+
+1. EMP表から、職種名(JOB列)の後ろから数えて3文字目から始まる2文字の  
+中にAの文字を含まない職種の社員を検索したい．最も適切なSELECT文を  
+選びなさい．なお、JOB列は必須列でNULLは存在しない．  
+また、職種名の文字数は5文字以上とする．
+
+	1. select empno, ename, job from emp  
+	where instr(substr(job,-3,2),'A') is null;
+	1. select empno, ename, job from emp  
+	where instr(substr(job,2,-3),'A') is null;
+	1. select empno, ename, job from emp  
+	where instr(substr(job,-3,2),'A') = 0;
+	1. select empno, ename, job from emp  
+	where instr(substr(job,2,-3),'A') = 0;
+
+1. 日付型HIRE_DATE列を以下の書式で表示する場合の指定方法として正しいもの  
+を選びなさい．
+
+	[表示例]  
+	15 of September 2004 18:30:30 PM
+
+	1. TO\_CHAR(hire_date, 'DD "of" MM YYYY HH24:MI:SS PM')
+	1. TO\_CHAR(hire_date, 'DD "of" MONTH YYYY HH24:MI:SS PM')
+	1. TO\_CHAR(hire_date, 'DD of Month YYYY HH24:MI:SS PM')
+	1. TO\_CHAR(hire_date, 'DD "of" Month YYYY HH24:MI:SS AM')
+
+1. TO_CHAR(0.25,'99.99')の実行結果として正しいものを選びなさい．
+
+	1. 0.25
+	1. 99.99
+	1. 00.25
+	1. □□.25(ピリオドの前に空白2つ)
+
+1. 現在の日付は2002年9月15日である．以下のHIRE_DATE列のデータに対して、  
+SELECT文①とSELECT文②を実行した場合に、検索されるデータ件数の差を選びなさい
+
+	[HIRE_DATE列のデータ]  
+	1980-04-01  
+	1994-04-01  
+	1998-04-01  
+	2000-04-01  
+	2002-04-01  
+
+	[SELECT文①]  
+	select hire_date from emp where hire_date > to_date('01-JAN-98', 'DD-MON-RR');
+
+	[SELECT文②]  
+	select hire_date from emp where hire_date > to_date('01-JAN-98', 'DD-MON-YY');
+
+	1. 0
+	1. 1
+	1. 3
+	1. 5
+
+1. EMP表の歩合給(COMM列)にはNULL値が含まれている．全社員の平均歩合給commを  
+求める式を選びなさい．
+
+	1. AVG(comm)
+	1. NVL(AVG(comm),0)
+	1. AVG(NVL(comm,0))
+	1. SUM(comm)/COUNT(comm)
+
+1. 以下の関数の実行結果として正しいものを選びなさい．
+
+	|列名|値|
+	|:--|:-|
+	|job列|SALESMAN|
+	|SAL列|2000|
+
+	DECODE(job,'PROG',1.10*sal,'CLERK',1.20*sal,'ACCOUNT',1.30*sal,sal)
+
+	1. 2000
+	1. 2400
+	1. エラー
+	1. NULL
+
+
+
+
+
+
+
 ## 10/29
 
 1. 以下に示すEMP表でSELECT文を実行する．エラーとなるSELECT文を２つ  

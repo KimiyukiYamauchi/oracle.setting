@@ -112,18 +112,13 @@ SELECT文①とSELECT文②を実行した場合に、検索されるデータ�
 	|job列|SALESMAN|
 	|SAL列|2000|
 
-	DECODE(job,'PROG',1.10*sal,'CLERK',1.20*sal,'ACCOUNT',1.30*sal,sal)
+	DECODE(job,'PROG',1.10\*sal,'CLERK',1.20\*sal,'ACCOUNT',1.30*sal,sal)
 
 	1. 2000
 	1. 2400
 	1. エラー
 	1. NULL
-
-
-
-
-
-
+	<br>
 
 ## 10/29
 

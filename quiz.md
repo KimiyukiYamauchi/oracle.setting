@@ -10,6 +10,9 @@
 	1. 1行ごとに1つの結果を戻す
 	1. 引数に指定できるのは列名か定数のみである
 	1. 入力したデータと同じデータ型の値を必ず戻す
+	<br>
+	=> 3, 5, 6
+	<br>
 
 1. 以下のSELECT文の実行結果として正しいものを選びなさい．
 
@@ -27,6 +30,9 @@
 	1. 1000 SCOTTTIGER 5 4 IG I GER
 	1. 1000 SCOTTTIGER 5 4 IGE TT
 	1. 1000 SCOTTTIGER 4 2 IG TT
+	<br>
+	=> 3
+	<br>
 
 1. 次の数値関数の結果の中から正しい物を2つ選びなさい
 
@@ -35,6 +41,9 @@
 	1. TRUNC(320.125)の結果は320である
 	1. ROUND(320.125,-3)の結果は300である
 	1. MOD(TRUNC(ROOUND(320.125,0),-1),100)の結果は0である
+	<br>
+	=> 1, 3
+	<br>
 
 1. 次の中からエラーとなる日付関数の指定方法を選びなさい．ただし、  
 日付書式はYYYY-MM-DDとする．
@@ -43,6 +52,9 @@
 	1. ADD_MONTHS('2002-09-15',-3)
 	1. NEXT_DAY('2002-08-31','SUNDAY')
 	1. NEXT_DAY('2002-08-31',3)
+	<br>
+	=> 1
+	<br>
 
 1. EMP表から、職種名(JOB列)の後ろから数えて3文字目から始まる2文字の  
 中にAの文字を含まない職種の社員を検索したい．最も適切なSELECT文を  
@@ -57,6 +69,9 @@
 	where instr(substr(job,-3,2),'A') = 0;
 	1. select empno, ename, job from emp  
 	where instr(substr(job,2,-3),'A') = 0;
+	<br>
+	=> 3
+	<br>
 
 1. 日付型HIRE_DATE列を以下の書式で表示する場合の指定方法として正しいもの  
 を選びなさい．
@@ -68,6 +83,9 @@
 	1. TO\_CHAR(hire_date, 'DD "of" MONTH YYYY HH24:MI:SS PM')
 	1. TO\_CHAR(hire_date, 'DD of Month YYYY HH24:MI:SS PM')
 	1. TO\_CHAR(hire_date, 'DD "of" Month YYYY HH24:MI:SS AM')
+	<br>
+	=> 4
+	<br>
 
 1. TO_CHAR(0.25,'99.99')の実行結果として正しいものを選びなさい．
 
@@ -75,6 +93,9 @@
 	1. 99.99
 	1. 00.25
 	1. □□.25(ピリオドの前に空白2つ)
+	<br>
+	=> 4
+	<br>
 
 1. 現在の日付は2002年9月15日である．以下のHIRE_DATE列のデータに対して、  
 SELECT文①とSELECT文②を実行した場合に、検索されるデータ件数の差を選びなさい
@@ -96,6 +117,9 @@ SELECT文①とSELECT文②を実行した場合に、検索されるデータ�
 	1. 1
 	1. 3
 	1. 5
+	<br>
+	=> 3
+	<br>
 
 1. EMP表の歩合給(COMM列)にはNULL値が含まれている．全社員の平均歩合給commを  
 求める式を選びなさい．
@@ -104,6 +128,9 @@ SELECT文①とSELECT文②を実行した場合に、検索されるデータ�
 	1. NVL(AVG(comm),0)
 	1. AVG(NVL(comm,0))
 	1. SUM(comm)/COUNT(comm)
+	<br>
+	=> 3
+	<br>
 
 1. 以下の関数の実行結果として正しいものを選びなさい．
 

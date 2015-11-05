@@ -12,7 +12,128 @@
 	where avg(sal)>1000 group by deptno;
 	1. select deptno,avg(sal) from emp group by deptno  
 	having avg(sal)>1000;
-	1. 
+	1. select count(\*) from emp group by count(\*);
+
+1. EMP表のSAL列値がそれぞれ2000、NULL、1000である場合、以下の  
+SELECT文の実行結果として正しいものを選びなさい．
+
+	select avg(sal),sum(sal),avg(nvl(sal,0)),  
+	avg(distinct nul(sal,0)) from emp;
+
+	1. 1000 3000 1500 1000
+	1. 1500 3000 1000 1500
+	1. 1000 3000 1500 1500
+	1. 1500 3000 1000 1000
+
+1. 以下のSCORE表で検索を実行すると結果はどうなるか．次の中から正しい  
+ものを選びなさい
+
+	[SCORE表]
+
+	|EMPNO|ENAME|HIREDATE|SCORE|
+	|----:|:----|:-------|----:|
+	|1000|SCOTT|2001-04-12|50.00|
+	|1010|ADAMS|2001-03-20|0.00|
+	|1050|MILLER|2000-10-10|-35.00|
+
+	select max(ename),min(hiredate),avg(score) from core;
+
+	1. ADAMS 2000-10-10 -10.00
+	1. SCOTT 2000-10-10 5.00
+	1. SCOTT 2000-04-12 5.00
+	1. SCOTT 2001-10-10 7.50
+
+1. 以下のSELECT文と検索結果から、歩合給(COMM)に関する説明として  
+正しいものを2つ選びなさい．
+
+	select count(comm),count(*),count(distinct comm) from emp;  
+
+	<検索結果\>  
+	10 16 5  
+
+	1. 何人かの社員は同一額の歩合給をもらっている
+	1. 6人は歩合給をもらっていない
+	1. 5人は歩合給をもらっていない
+	1. 16人が歩合給をもらっている
+
+1. EMP表から、社員の住んでいる異なる市(CITY_NAME列)の数を調べたい．  
+次の中から正しいSELECT文を選びなさい．
+
+	1. select count(upper(city_name)) from emp;
+	1. select count(upper(unique city_name)) from emp;
+	1. select count(distinct upper(city_name)) from emp;
+	1. select count(*) from emp group by upper(city_name);
+
+1. 次のSELECT文の中からエラーにならないものを選びなさい．
+
+	1. select ename,min(hiredate) from emp;
+	1. select deptno dept, avg(sal) avgsal from emp  
+	group by dept having avg(sal)>2000;
+	1. select deptno dept,avg(sal) avgsal from emp  
+	group by deptno having avgsal>2000;
+	1. select deptno,job,max(sal) from emp group by deptno  
+	having max(sal)>=3000;
+	1. select deptno,avg(sal) from emp group by deptno  
+	order by job;
+	1. select avg(sal) from emp having avg(sal)>2000;
+
+
+	---
+	\[EMP表\](資料)
+
+	|EMPNO|ENAME|SAL|JOB|DEPTNO|
+	|----:|:----|--:|:--|-----:|
+	|1000|SCOTT|1000|CLERK|10|
+	|1010|ADAMS|2000|SALESMAN|10|
+	|1030|TAYLOR|600|SALESMAN|30|
+	|1050|MILLER|800|CLERK|10|
+
+1. 上記資料のEMP表で、以下のSELECT文で検索を実行した結果として正しい  
+ものを選びなさい．
+
+	select min(avg(sal)) from emp group by deptno,job  
+	having count(*)>1;
+
+	1. 600
+	1. 900
+	1. 1300
+	1. 2000
+
+1. 上記資料のEMP表で、以下のグループ関数を使った検索を実行した結果として  
+正しいものを選びなさい．
+
+	select min(avg(sal)) from emp group by deptno, job;
+
+	1. 600
+	1. 900
+	1. 2000
+	1. エラー
+
+1. EMP表のCITY_NAME列から社員の住所の分散および分布状況を調べたい．  
+以下の中からより適切な文を選びなさい．
+
+	1. select count(distinct city_name) cnt from emp  
+	order by cnt;
+	1. select distinct upper(city_name),count(*) cnt  
+	from emp order by cnt;
+	1. select city_name,count(*) cnt from emp group by  
+	upper(city_name) order by cnt;
+	1. select upper(city_name),count(*) cnt from emp  
+	group by upper(city_name) order by cnt;
+
+1. 次の列定義の場合に、エラーになるグループ関数の使い方を以下の中から  
+選びなさい．
+
+	<列定義\>  
+	col1 number  
+	col2 number  
+	col3 number  
+
+	1. select avg(col1,col2,col3) from ...
+	1. select avg(col1),avg(col2),avg(col3) from ...
+	1. select avg(col1+col2+col3) from ...
+	1. select avg(col1)+avg(col2)+avg(col3) from ...
+
 
 ## 11/4
 

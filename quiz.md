@@ -1,5 +1,19 @@
 # オラクル小テスト
 
+## 11/5
+
+1. 次のSELECT文の中から、実行するとエラーとなるものを3つ選びなさい．
+
+	1. select avg(sal) from emp;
+	1. select avg(sal) from emp where deptno=10;
+	1. select deptno,avg(sal) from emp;
+	1. select deptno,avg(sal) from emp group by deptno;
+	1. select deptno,avg(sal) from emp  
+	where avg(sal)>1000 group by deptno;
+	1. select deptno,avg(sal) from emp group by deptno  
+	having avg(sal)>1000;
+	1. 
+
 ## 11/4
 
 1. 単一行関数に関する説明として誤っているものをすべて選びなさい．

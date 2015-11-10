@@ -13,6 +13,9 @@
 	1. select deptno,avg(sal) from emp group by deptno  
 	having avg(sal)>1000;
 	1. select count(\*) from emp group by count(\*);
+	<br>
+	=> 3, 5, 7
+	<br>
 
 1. EMP表のSAL列値がそれぞれ2000、NULL、1000である場合、以下の  
 SELECT文の実行結果として正しいものを選びなさい．
@@ -24,6 +27,9 @@ SELECT文の実行結果として正しいものを選びなさい．
 	1. 1500 3000 1000 1500
 	1. 1000 3000 1500 1500
 	1. 1500 3000 1000 1000
+	<br>	
+	=> 4
+	<br>
 
 1. 以下のSCORE表で検索を実行すると結果はどうなるか．次の中から正しい  
 ものを選びなさい
@@ -42,6 +48,9 @@ SELECT文の実行結果として正しいものを選びなさい．
 	1. SCOTT 2000-10-10 5.00
 	1. SCOTT 2000-04-12 5.00
 	1. SCOTT 2001-10-10 7.50
+	<br>
+	=> 2
+	<br>
 
 1. 以下のSELECT文と検索結果から、歩合給(COMM)に関する説明として  
 正しいものを2つ選びなさい．
@@ -55,6 +64,9 @@ SELECT文の実行結果として正しいものを選びなさい．
 	1. 6人は歩合給をもらっていない
 	1. 5人は歩合給をもらっていない
 	1. 16人が歩合給をもらっている
+	<br>
+	=> 1, 2
+	<br>
 
 1. EMP表から、社員の住んでいる異なる市(CITY_NAME列)の数を調べたい．  
 次の中から正しいSELECT文を選びなさい．
@@ -63,6 +75,9 @@ SELECT文の実行結果として正しいものを選びなさい．
 	1. select count(upper(unique city_name)) from emp;
 	1. select count(distinct upper(city_name)) from emp;
 	1. select count(*) from emp group by upper(city_name);
+	<br>
+	=> 3
+	<br>
 
 1. 次のSELECT文の中からエラーにならないものを選びなさい．
 
@@ -76,6 +91,9 @@ SELECT文の実行結果として正しいものを選びなさい．
 	1. select deptno,avg(sal) from emp group by deptno  
 	order by job;
 	1. select avg(sal) from emp having avg(sal)>2000;
+	<br>
+	=> 6
+	<br>
 
 
 	---
@@ -98,6 +116,9 @@ SELECT文の実行結果として正しいものを選びなさい．
 	1. 900
 	1. 1300
 	1. 2000
+	<br>
+	=> 2
+	<br>
 
 1. 上記資料のEMP表で、以下のグループ関数を使った検索を実行した結果として  
 正しいものを選びなさい．
@@ -108,6 +129,9 @@ SELECT文の実行結果として正しいものを選びなさい．
 	1. 900
 	1. 2000
 	1. エラー
+	<br>
+	=> 1
+	<br>
 
 1. EMP表のCITY_NAME列から社員の住所の分散および分布状況を調べたい．  
 以下の中からより適切な文を選びなさい．
@@ -120,6 +144,9 @@ SELECT文の実行結果として正しいものを選びなさい．
 	upper(city_name) order by cnt;
 	1. select upper(city_name),count(*) cnt from emp  
 	group by upper(city_name) order by cnt;
+	<br>
+	=> 4
+	<br>
 
 1. 次の列定義の場合に、エラーになるグループ関数の使い方を以下の中から  
 選びなさい．
@@ -133,6 +160,9 @@ SELECT文の実行結果として正しいものを選びなさい．
 	1. select avg(col1),avg(col2),avg(col3) from ...
 	1. select avg(col1+col2+col3) from ...
 	1. select avg(col1)+avg(col2)+avg(col3) from ...
+	<br>
+	=> 1
+	<br>
 
 
 ## 11/4

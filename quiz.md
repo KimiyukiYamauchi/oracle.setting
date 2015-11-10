@@ -188,6 +188,40 @@
 	1. select ename,dname from emp e left outer join  
 	dept d on (e.deptno=d.deptno);
 
+1. 以下のEMP表とDEPT表で、SELECT文を実行すると何件のデータが戻されるか．  
+正しい件数を選びなさい．
+
+	[EMP表]
+
+	|EMPNO|ENAME|JOBNO|SAL|DEPTNO|
+	|----:|:----|----:|--:|-----:|
+	|1000|ADAMS|100|1000|10|
+	|1010|MILLER|200|1200||
+	|1020|SCOTT|100|800|30|
+
+	[DEPT表]
+
+	|DEPTNO|DNAME|
+	|-----:|:----|
+	|10|PERSONNEL|
+	|20|ACCOUNT|
+	|30|DESIGN|
+
+	select ename,dname from emp e full outer join dept d  
+	on (e.deptno=d.deptno);
+
+	1. 0
+	1. 2
+	1. 3
+	1. 4
+
+1. 以下の中から等価結合を使用するケースとして適しているものを選びなさい．
+
+	1. 2つの表の一方の結合列に一致しない値を含む
+	1. 2つの表は異なる値(ただし関連する値)を持つ
+	1. 2つの表の両方の結合列に一致しない値を含む
+	1. 2つの表は同じ値(外部キーで参照)を持つ
+	
 
 ## 11/10
 

@@ -1,5 +1,194 @@
 # オラクル小テスト
 
+## 11/10
+
+1. EMP表(10行)とDEPT表(5行)のクロス結合で生成される行数を選びなさい．  
+
+	1. 5
+	1. 10
+	1. 15
+	1. 50
+
+1. 以下のSELECT文を実行するとエラーとなる．次の中から原因として考えられる  
+ものを選びなさい．なお、EMP表とDEPT表には共通列としてDEPTNOがあるものとする．
+
+	select empno,ename,deptno,dname  
+	from emp join dept on emp.deptno=dept.deptno  
+	order by empno.
+
+	1. 表別名を指定していない
+	1. SELECT句のDEPTNOを表名で修飾していない
+	1. 結合ではORDER BY句は指定できない
+	1. 結合条件に誤りがある
+
+1. 以下の3つの表を結合するSELECT文として誤っているものを選びなさい．
+
+	[EMP表]
+
+	|EMPNO|ENAME|JOBNO|SAL|DEPTNO|
+	|----:|:----|----:|--:|-----:|
+	|1000|ADAMS|100|1000|10|
+	|1010|MILLER|200|1200|10|
+	|1020|SCOTT|300|800|30|
+
+	[JOB表]
+
+	|JOBNO|JNAME|
+	|----:|:----|
+	|100|CLERK|
+	|200|MANAGER|
+	|300|SALESMAN|
+
+	[DEPT表]
+
+	|DEPTNO|DNAME|
+	|----:|:----|
+	|10|PERSONNEL|
+	|20|ACCOUNT|
+	|30|DESIGN|
+
+	1. select e.empno,e.ename,j.jname,e.sal,d.dname  
+	from emp e join job j e.jobno=j.jobno  
+	join dept d on j.deptno=d.deptno;
+	1. select empno,ename,jname,sal,dname  
+	from emp natural join job natural join dept;
+	1. select empno,ename,jname,sal,dname  
+	from dept natural join job natural join emp;
+	1. select e.empno,e.ename,j.jname,e.sal,dname  
+	from emp e join job j on e.jobno=j.jobno  
+	natural join dept;
+
+1. 以下の3つの表の結合に関して、設問(1)~(4)の解答を解答郡から選びなさい．
+
+	[EMP表]
+
+	|EMPNO|ENAME|MGR|SAL|DEPTNO|
+	|----:|:----|--:|--:|-----:|
+	|1000|ADAMS|1010|1000|10|
+	|1010|MILLER|1020|1200|10|
+	|1020|SCOTT||800|30|
+
+	[SALGRADE表]
+
+	|GRADE|LOSAL|HIGHSAL|
+	|----:|----:|------:|
+	|1|0|1000|
+	|2|1001|2000|
+	|3|2001|3000|
+
+	[DEPT表]
+
+	|DEPTNO|DNAME|
+	|----:|:----|
+	|10|PERSONNEL|
+	|20|ACCOUNT|
+	|30|DESIGN|
+
+	<設問>  
+	(1) 社員名と部門名を検索するために行う結合の種類を選びなさい．  
+	(2) 社員名と給与のグレードを検索するために行う結合の種類を選びなさい．  
+	(3) まだ社員が１人も所属していない部門も含めて、社員名と部門名  
+	を検索するために行う結合の種類を選びなさい．  
+	(4) 社員の上司と部下の関係を検索するために行う結合の種類を  
+	選びなさい  
+
+	<解答群>
+
+	1. 外部結合
+	1. 非等価結合
+	1. 等価結合
+	1. 自己結合
+
+1. 自然結合(NATURAL JOIN)の説明として正しいものを2つ選びなさい．
+
+	1. 2つの表の同じ列名の列に基いて結合を行う
+	1. 同じ列名の列が複数存在する場合は、いずれかの列に等しい値を  
+	持つ行を結合する
+	1. 同じ列名の列が複数存在する場合はエラーとなる
+	1. 同じ列名の列がない場合はCROSS JOINとなる
+
+1. 以下に示すSELECT文でEMP表とDEPT表の自然結合を行うと何件のデータ  
+が戻されるか．正しい件数を選びなさい．
+
+	[EMP表]
+
+	|EMPNO|ENAME|JOBNO|SAL|DEPTNO|
+	|----:|:----|----:|--:|-----:|
+	|1000|ADAMS|100|1000|10|
+	|1010|MILLER|200|1200|10|
+	|1020|SCOTT|100|800|30|
+
+	[DEPT表]
+
+	|DEPTNO|DNAME|EMPNO|
+	|-----:|:----|----:|
+	|10|PERSONNEL|1000|
+	|20|ACCOUNT||
+	|30|DESIGN||
+
+	select empno,ename,dname from emp natural join dept;
+
+	1. 0
+	1. 1
+	1. 2
+	1. 3
+
+1. 以下に示すSELECT文でEMP表とDEPT表の自然結合を行うと何件のデータ  
+が戻されるか．正しい件数を選びなさい．
+
+	[EMP表]
+
+	|EMPNO|ENAME|JOBNO|SAL|DEPTNO|
+	|----:|:----|----:|--:|-----:|
+	|1000|ADAMS|100|1000|10|
+	|1010|MILLER|200|1200|10|
+	|1020|SCOTT|100|800|30|
+
+	[DEPT表]
+
+	|DEPTNO|DNAME|EMPNO|
+	|-----:|:----|----:|
+	|10|PERSONNEL|1000|
+	|20|ACCOUNT||
+	|30|DESIGN||
+
+	select e.empno,ename,dname from emp e  
+	join dept using(deptno);
+
+	1. 0
+	1. 1
+	1. 2
+	1. 3
+
+1. 以下のEMP表とDEPT表から、未配属の社員を含めて社員とその部門  
+を検索するSELECT文を2つ選びなさい．
+
+	[EMP表]
+
+	|EMPNO|ENAME|JOBNO|SAL|DEPTNO|
+	|----:|:----|----:|--:|-----:|
+	|1000|ADAMS|100|1000|10|
+	|1010|MILLER|200|1200||
+	|1020|SCOTT|100|800|30|
+
+	[DEPT表]
+
+	|DEPTNO|DNAME|
+	|-----:|:----|
+	|10|PERSONNEL|
+	|20|ACCOUNT|
+	|30|DESIGN|
+
+	1. select ename,dname from emp e,dept d where  
+	e.deptno=d.deptno(+);
+	1. select ename,dname from emp e,dept d where  
+	e.deptno(+)=d.deptno;
+	1. select ename,dname from emp e right outer join  
+	dept d on (e.deptno=d.deptno);
+	1. select ename,dname from emp e left outer join  
+	dept d on (e.deptno=d.deptno);
+
+
 ## 11/5
 
 1. 次のSELECT文の中から、実行するとエラーとなるものを3つ選びなさい．

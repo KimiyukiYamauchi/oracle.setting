@@ -1,5 +1,146 @@
 # オラクル小テスト
 
+## 11/12
+
+1. 副問い合わせが使用できる句を次の中から3つ選びなさい
+
+	1. SELECT句
+	1. FROM句
+	1. WHERE句
+	1. ORDER BY句
+	1. GROUP BY句
+	1. HAVING句
+
+1. 以下のEMP表から副問い合わせを使って検索したときに、エラーとなる  
+SELECT文を次の中から2つ選びなさい．
+
+	[EMP表]
+
+	|EMPNO|ENAME|SAL|JOB|DEPTNO|
+	|----:|:----|--:|:--|-----:|
+	|1000|SCOTT|1000|CLERK|10|
+	|1010|ADAMS|2000|SALESMAN|10|
+	|1030|TAYLOR|600|SALESMAN|30|
+	|1050|MILLER|800|CLERK|10|
+
+	1. select ename from emp where job = (select distinct  
+	job from emp);
+	1. select ename from emp where deptno = (select  
+	deptno from emp where ename = 'ADAMS');
+	1. select ename from emp where deptno = (select  
+	deptno from emp group by deptno);
+	1. select ename from emp where deptno = (select  
+	deptno from emp group by deptno having  
+	count(*)>1);
+
+1. ある条件の社員を検索する以下のSELECT文がエラーになった．原因として  
+考えられるものを選びなさい．
+
+	select empno,ename from emp where deptno = (select depto  
+	from emp where sal= (select max(sal) from emp));
+
+	1. まだ配属先が決まっていない新人がいる
+	1. sal列値がNULLの社員がいる
+	1. 最高給与をもらっている社員が2人いる
+	1. 新設の部門があり、所属する社員がまだいない
+
+1. 以下のSELECT文で、EMP表からある条件の部門番号を検索する．次の中から  
+正しい説明を2つ選びなさい．
+
+	select deptno from emp group by deptno having avg(sal) =  
+	(select max(avg(sal)) from emp group by deptno);
+
+	1. 比較演算子=の変わりにINを使っても結果は同じである
+	1. 平均給与が最も高い部門が2つあるとエラーになる
+	1. DEPTNOの列値が1種類だけなら、検索されるデータは0県である
+	1. 平均給与が最も高い部門の番号を検索する
+
+1. 比較演算子INと同じ働きをする演算子を選びなさい．
+
+	1. =ALL
+	1. <>ALL
+	1. =ANY
+	1. <>ANY
+
+1. EMP表のSAL列値はそれぞれ600、800、1000、2000である．以下のSELECT文を実行すると  
+何件のデータが検索されるか．次の中から選びなさい．
+
+	select sal from emp where sal<= all (700,900,1600);
+
+	1. 0
+	1. 1
+	1. 2
+	1. 3
+	1. 4
+---
+
+	\[EMP表](資料)
+
+	|EMPNO|ENAME|SAL|MGR|DEPTNO|
+	|----:|:----|--:|--:|-----:|
+	|1000|SCOTT|1000||10|
+	|1010|ADAMS|2000|1000|10|
+	|1030|TAYLOR|600|1000|30|
+	|1050|MILLER|800|1030|10|
+
+1. 上記EMP表で、以下の副問い合わせを使ったSELECT文を実行した．  
+検索されるデータ件数を選びなさい．
+
+	select empno,ename from emp where empno not in(select  
+	mgr from emp);
+
+	1. 0
+	1. 1
+	1. 2
+	1. 3
+
+1. 上記EMP表で、以下の副問い合わせを使ったSELECT文を実行した．  
+検索されるデータ件数を選びなさい．
+
+	select empno,ename from emp where empno not in (select  
+	mgr from emp where mgr is not null);
+
+	1. 0
+	1. 1
+	1. 2
+	1. 3
+
+1. EMP表にはEMPNO列、ENAME列、SAL列、JOB列、DEPTNO列がある．  
+副問合せを使う必要がある作業はどれか．次の中から選びなさい．
+
+	1. 最高給与の社員を検索する
+	1. 部門番号10の部門の平均給与を求める
+	1. 部門別の最高平均給与を求める
+	1. 社員番号1050のSALを1.5倍にする
+
+1. 以下の2つの表がある場合、副問合せまたは結合を使う作業を4つ選びなさい．
+
+ 	[EMP表]
+
+	|EMPNO|ENAME|JOBNO|SAL|DEPTNO|
+	|----:|:----|----:|--:|-----:|
+	|1000|ADAMS|100|1000|10|
+	|1010|MILLER|200|1200|10|
+	|1020|SCOTT|100|800|30|
+
+	[DEPT表]
+
+	|DEPTNO|DNAME|EMPNO|
+	|-----:|:----|----:|
+	|10|PERSONNEL|1000|
+	|20|ACCOUNT||
+	|30|DESIGN||
+
+	1. EMP表から部門番号30に所属する社員だけのEMP30表を作成する
+	1. EMP表から部門別の人数を調べる
+	1. MILLERのSL列値をSCOTTと同じSAL列値に更新する
+	1. EMP表から部門番号30に所属する社員だけのEMPVIEW30ビュー  
+	を作成する
+	1. EMP表のMILLERのデータを、部門番号30に所属する社員だけの  
+	EMP30表へコピーする
+	1. EMP表から部門別の人数を降順に検索する
+	
+
 ## 11/11
 
 1. EMP表(10行)とDEPT表(5行)のクロス結合で生成される行数を選びなさい．  

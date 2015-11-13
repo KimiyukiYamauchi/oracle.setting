@@ -1,5 +1,123 @@
 # オラクル小テスト
 
+## 11/18
+
+1. 3つの列(EMPNO列、ENAME列、SAL列)で構成されているEMP表に  
+新しいデータを挿入するINSERT文として正しいものを選びなさい．
+
+	1. insert into emp(empno,ename)  
+	values(1000,'KING',3000);
+	1. insert into emp(empno,ename,sal)  
+	values(1000,'KING');
+	1. insert into emp(empno,ename,sal)  
+	values(1000,'KING',3000);
+	1. insert into emp values(1000,'KING');
+	1. insert into emp  
+	values(&empno,'&ename',&sal,&deptno);
+
+1. EMP表は3つの列(EMPNO列、ENAME列、SAL列)で構成されている．  
+次のINSERT文の中から、ENAME列にNULL値を設定しないものを選びなさい．  
+ただし、ENAME列のデータ型はVARCHAR2(20)であり、デフォルトはNULLとする．
+
+	1. insert into emp(emp,sal) values(1000,2400);
+	1. insert into emp values(1000,,2400);
+	1. insert into emp values(1000,NULL,2400);
+	1. insert into emp values(1000,DEFAULT,2400);
+
+1. 以下のような列定義のEMP表にデータを挿入したい．次のINSERT文から  
+正しいものを選びなさい．
+	<EMP表>
+
+	|列名|データ型|
+	|:--|:-----|
+	|EMPNO|NUMBER(6)|
+	|ENAME|VARCHAR2(10)|
+	|SAL|NUMBER(5,2)|
+	|HIREDATE|DATE(日付書式はRR-MM-DD)|
+
+	1. insert into emp  
+	values(221000,'TAYLOR',1010.6,sysdate);
+	1. insert into emp values(221000,'TAYLOR',880.60,  
+	'02-04-01')
+	1. insert into emp values(221000,TAYLOR,880.60,  
+	02-04-01);
+	1. insert into emp values(221000,TAYLOR,880.60,  
+	'02-04-01');
+
+1. EMP表を更新する以下のUPDATE文に関する説明として正しいものを選びなさい  
+
+	update emp set mgr=2586,job=null,deptno=default,  
+	sal=(select sal from emp where empno=3000)  
+	where empno=2000;
+
+	1. set句ではNULL、DEFAULTキーワードは指定できないのでエラーとなる
+	1. EMPNO列値が2000であるデータが表内になければエラーとなる
+	1. EMPNO列値が2000であるデータが表内になければ全データが更新される
+	1. EMPNO列値が3000であるデータが表内になければ、SAL列にNULL値を設定する
+
+1. EMP表から全データを削除するDELETE文として正しいものを2つ選びなさい．
+
+	1. delete emp;
+	1. delete * from emp;
+	1. delete from emp where 1<> 2;
+	1. delete from emp where 1=2;
+
+1. 以下の順番でSQL文を発行した．直後の状態として正しい説明を2つ選びなさい．
+
+	<SQLの発行順\>  
+	① INSERT文  
+	② SAVEPOINT S1;  
+	③ DELETE文  
+	④ SAVEPOINT S2;  
+	⑤ UPDATE文  
+	⑥ ROLLBACK TO S1;  
+
+	1. S1、S2とも有効である
+	1. S1は有効、S2は無効となる
+	1. S1、S2とも無効となる
+	1. DELETE文およびUPDATE文の変更はロールバックされる
+
+1. 自動ロールバックされるイベントとして正しいものを次の中から2つ選びなさい．
+
+	1. SQL*Plusの異常終了
+	1. DDL文の発行
+	1. EXIT文によるSQL*Plus終了
+	1. システム障害
+
+1. 読み取り一貫性に関する説明として誤っているものを選びなさい
+
+	1. 同一データに対するUPDATE、INSERTおよびDELETE文はロック待ちになる
+	1. 同一データに対するSELECT文はロック待ちになる
+	1. 読み取り一貫性実現のためUNDOセグメントが使われている
+	1. ほかのトランザクションで更新中のデータをSELECT文によって検索すると、  
+更新前のコミットされたデータが戻される
+
+1. 以下のSELECT文に関する説明として正しいものを選びなさい．
+
+	select empno,ename,sal from emp where depto=30  
+	for update wait 10 order by empno;
+
+	1. EMP表が排他ロックされる
+	1. EMP表のDEPTNO列に30の値を持つ行が10秒間だけ排他ロックされる
+	1. このSELECT文では一切排他ロックされない
+	1. 検索対象の行が他のユーザーによってすでにロックされている場合は  
+	そのロックの解放を10秒間だけ待機する
+
+1. YOUNGの昇進・異動に伴い、EMP表のYOUNGのデータを更新しようとしたところ  
+エラーになった．目的の更新を行うためにUPDATE文を変更する必要がある．  
+最も適切な変更方法を選びなさい．
+
+	update (select empno,ename,sal,job,deptno from emp  
+	where deptno=20 with check option)  
+	set sal=sal*1.2,job='MANAGER',deptno=30  
+	where empno=3000 and ename='YOUNG';
+
+	1. WITH CHECK OPTIONを削除する
+	1. sal=sal*1.2を削除する
+	1. dept=30を削除する
+	1. empno=3000を削除する
+
+
 ## 11/17
 
 1. 集合演算子に関する説明として正しいものを選びなさい．

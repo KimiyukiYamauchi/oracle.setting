@@ -28,8 +28,8 @@
 
 	``` desc emp ```
 
-	|名前|NULL?|型
-	|:--|:----|:-
+	|名前|NULL?|型|
+	|:--|:----|:-|
 	|EMPNO|NOT NULL|NUMBER(6)|
 	|ENAME|NOT NULL|VARCHAR2(10)|
 	|S_DATE||DATE|

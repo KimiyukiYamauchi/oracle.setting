@@ -1,5 +1,106 @@
 # オラクル小テスト
 
+## 11/19
+
+1. 表を作成するユーザーにとって必要なものを2つ選びなさい．
+
+	1. データベース管理者
+	1. 記憶域
+	1. 順序
+	1. CREATE TABLE権限
+
+1. スキーマに関する説明として誤っているものを次の中から選びなさい．
+
+	1. 所有するオブジェクトの集合を消す
+	1. SQL文では、他のユーザーが所有するオブジェクトにはそのスキーマ名を  
+	接頭辞として付ける
+	1. SQL文で、スキーマ名のデフォルトはSYSTEMである
+	1. スキーマが異なれば同じ表名であってもエラーにならない
+
+1. スキーマオブジェクトの指定方法として正しいものを選びなさい．
+
+	1. スキーマ名.オブジェクト名
+	1. スキーマ名_オブジェクト名
+	1. オブジェクト名.スキーマ名
+	1. オブジェクト名_スキーマ名
+
+1. VARCHAR2型の説明として正しいものを次の中から選びなさい．
+
+	1. VARCHAR2(SIZE)では、sizeを超えるデータはエラーとなる
+	1. VARCHAR2(SIZE)では、size未満のデータはベースを後ろに加え、  
+	sizeまで拡張されて格納される
+	1. 指定できる値の範囲は、1<=size<=2000である
+	1. sizeのデフォルトは1である
+
+1. CHAR型の説明として誤っているものを次の中から選びなさい．
+
+	1. CHAR(SIZE)では、sizeを超えるデータはエラーとなる
+	1. CHAR(SIZE)では、size未満のデータはスペースを後ろに加え、  
+	sizeまで拡張されて格納される
+	1. 指定できる値の範囲は、1<=size<=2000である
+	1. sizeは省略できない
+
+1. NUMBER(p,s)型の説明として誤っているものを次の中から選びなさい．
+
+	1. pは精度であり、10進数桁の総数を表す．指定範囲は1<=p<=38である
+	1. sは位取りで、小数点以下の桁数を表す．指定範囲は-84<=s<=127である
+	1. NUMBER(p)とすると、小数点データは格納できない
+	1. pは省略できない
+
+1. UNIQUE制約の定義でエラーになる文を2つ選びなさい．
+
+	1. create table emp (empno number(6) unique);
+	1. create table emp (empno number(6) constraint  
+	emp\_ename_uq unique);
+	1. create table emp (empno number(6) constraint  
+	emp\_ename_uq unique(empno));
+	1. create table emp (empno number(6), constraint  
+	emp\_ename_uq unique(empno));
+	1. create table emp (bank_no number(3)  
+	unique(bank\_no,accout\_no),account_no number(6));
+	1. create table emp (bank\_no number(3), account\_no  
+	number(6), constraint emp\_bank\_no\_account\_no_uq  
+	unique(bank\_no,account_no));
+
+1. PRIMARY KEY制約の定義でエラーになる文を選びなさい．
+
+	1. create table emp (empno number(6) primary key);
+	1. create table emp (empno number(6) constraint  
+	emp\_ename_pk primary key(empno));
+	1. create table emp (empno number(6) ,constraint  
+	emp\_ename_uq primary key(empno));
+	1. create table emp (bank_no number(3),acount_no  
+	number(6), constraint emp\_bank_no_account\_no_uq  
+	primary key(bank\_no,accoun_no));
+
+1. FOREIGN KEY制約を定義したい．DEPTNO列がDEPT表の主キーである  
+場合、エラーになる文を選びなさい．
+
+	1. create table emp (deptno number(6) constraint  
+	deptno_fk references dept(deptno));
+	1. create table emp (deptno number(6) references  
+	dept);
+	1. create table emp (deptno number(6) constraint  
+	deptno_fk foreign key(deptno) references  
+	dept(deptno));
+	1. create table emp (deptno number(6), constraint  
+	deptno_fk foreign key(deptno) references  
+	dept(deptno));
+
+1. CHECK制約を定義したい．正常に実行できる文を2つ選びなさい．
+
+	1. create table emp (empno number(6)  
+	check(empno>sal),sal number(6));
+	1. create table emp (hiredate date constraint  
+	date_ck check(hiredate>sysdate-1));
+	1. create table emp (empno number(6) constraint  
+	ename_ck check(empno>1000));
+	1. create table emp (empno number(6) ,  
+	check(empno>sal),sal number(6));
+	1. create table emp (empno number(6) ,  
+	check(empno>rownum),sal number(6));
+
+
 ## 11/18
 
 1. 3つの列(EMPNO列、ENAME列、SAL列)で構成されているEMP表に  

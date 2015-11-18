@@ -13,7 +13,10 @@
 	values(1000,'KING',3000);
 	1. insert into emp values(1000,'KING');
 	1. insert into emp  
-	values(&empno,'&ename',&sal,&deptno);
+	values(&empno,'&ename',&sal,&deptno);  
+	<br>
+	=> 3
+	<br>
 
 1. EMP表は3つの列(EMPNO列、ENAME列、SAL列)で構成されている．  
 次のINSERT文の中から、ENAME列にNULL値を設定しないものを選びなさい．  
@@ -22,7 +25,10 @@
 	1. insert into emp(emp,sal) values(1000,2400);
 	1. insert into emp values(1000,,2400);
 	1. insert into emp values(1000,NULL,2400);
-	1. insert into emp values(1000,DEFAULT,2400);
+	1. insert into emp values(1000,DEFAULT,2400);  
+	<br>
+	=> 2
+	<br>
 
 1. 以下のような列定義のEMP表にデータを挿入したい．次のINSERT文から  
 正しいものを選びなさい．
@@ -42,7 +48,10 @@
 	1. insert into emp values(221000,TAYLOR,880.60,  
 	02-04-01);
 	1. insert into emp values(221000,TAYLOR,880.60,  
-	'02-04-01');
+	'02-04-01');  
+	<br>
+	=> 2
+	<br>
 
 1. EMP表を更新する以下のUPDATE文に関する説明として正しいものを選びなさい  
 
@@ -53,14 +62,19 @@
 	1. set句ではNULL、DEFAULTキーワードは指定できないのでエラーとなる
 	1. EMPNO列値が2000であるデータが表内になければエラーとなる
 	1. EMPNO列値が2000であるデータが表内になければ全データが更新される
-	1. EMPNO列値が3000であるデータが表内になければ、SAL列にNULL値を設定する
+	1. EMPNO列値が3000であるデータが表内になければ、SAL列にNULL値を設定する  
+	<br>
+	=> 4
+	<br>
 
 1. EMP表から全データを削除するDELETE文として正しいものを2つ選びなさい．
 
 	1. delete emp;
 	1. delete * from emp;
 	1. delete from emp where 1<> 2;
-	1. delete from emp where 1=2;
+	1. delete from emp where 1=2;  
+	<br>
+	=> 1, 3
 
 1. 以下の順番でSQL文を発行した．直後の状態として正しい説明を2つ選びなさい．
 
@@ -75,14 +89,19 @@
 	1. S1、S2とも有効である
 	1. S1は有効、S2は無効となる
 	1. S1、S2とも無効となる
-	1. DELETE文およびUPDATE文の変更はロールバックされる
+	1. DELETE文およびUPDATE文の変更はロールバックされる  
+	<br>
+	=> 2, 4
+	<br>
 
 1. 自動ロールバックされるイベントとして正しいものを次の中から2つ選びなさい．
 
 	1. SQL*Plusの異常終了
 	1. DDL文の発行
 	1. EXIT文によるSQL*Plus終了
-	1. システム障害
+	1. システム障害  
+	<br>
+	=> 1, 4
 
 1. 読み取り一貫性に関する説明として誤っているものを選びなさい
 
@@ -90,7 +109,10 @@
 	1. 同一データに対するSELECT文はロック待ちになる
 	1. 読み取り一貫性実現のためUNDOセグメントが使われている
 	1. ほかのトランザクションで更新中のデータをSELECT文によって検索すると、  
-更新前のコミットされたデータが戻される
+更新前のコミットされたデータが戻される  
+	<br>
+	=> 2
+	<br>
 
 1. 以下のSELECT文に関する説明として正しいものを選びなさい．
 
@@ -101,7 +123,10 @@
 	1. EMP表のDEPTNO列に30の値を持つ行が10秒間だけ排他ロックされる
 	1. このSELECT文では一切排他ロックされない
 	1. 検索対象の行が他のユーザーによってすでにロックされている場合は  
-	そのロックの解放を10秒間だけ待機する
+	そのロックの解放を10秒間だけ待機する  
+	<br>
+	=> 4
+	<br>
 
 1. YOUNGの昇進・異動に伴い、EMP表のYOUNGのデータを更新しようとしたところ  
 エラーになった．目的の更新を行うためにUPDATE文を変更する必要がある．  
@@ -115,7 +140,10 @@
 	1. WITH CHECK OPTIONを削除する
 	1. sal=sal*1.2を削除する
 	1. dept=30を削除する
-	1. empno=3000を削除する
+	1. empno=3000を削除する  
+	<br>
+	=> 1
+	<br>
 
 
 ## 11/17

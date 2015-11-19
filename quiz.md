@@ -7,7 +7,10 @@
 	1. データベース管理者
 	1. 記憶域
 	1. 順序
-	1. CREATE TABLE権限
+	1. CREATE TABLE権限  
+	<br>
+	=> 2, 4
+	<br>
 
 1. スキーマに関する説明として誤っているものを次の中から選びなさい．
 
@@ -15,14 +18,20 @@
 	1. SQL文では、他のユーザーが所有するオブジェクトにはそのスキーマ名を  
 	接頭辞として付ける
 	1. SQL文で、スキーマ名のデフォルトはSYSTEMである
-	1. スキーマが異なれば同じ表名であってもエラーにならない
+	1. スキーマが異なれば同じ表名であってもエラーにならない  
+	<br>
+	=> 3
+	<br>
 
 1. スキーマオブジェクトの指定方法として正しいものを選びなさい．
 
 	1. スキーマ名.オブジェクト名
 	1. スキーマ名_オブジェクト名
 	1. オブジェクト名.スキーマ名
-	1. オブジェクト名_スキーマ名
+	1. オブジェクト名_スキーマ名  
+	<br>
+	=> 1
+	<br>
 
 1. VARCHAR2型の説明として正しいものを次の中から選びなさい．
 
@@ -30,7 +39,10 @@
 	1. VARCHAR2(SIZE)では、size未満のデータはベースを後ろに加え、  
 	sizeまで拡張されて格納される
 	1. 指定できる値の範囲は、1<=size<=2000である
-	1. sizeのデフォルトは1である
+	1. sizeのデフォルトは1である  
+	<br>
+	=> 1
+	<br>
 
 1. CHAR型の説明として誤っているものを次の中から選びなさい．
 
@@ -38,14 +50,20 @@
 	1. CHAR(SIZE)では、size未満のデータはスペースを後ろに加え、  
 	sizeまで拡張されて格納される
 	1. 指定できる値の範囲は、1<=size<=2000である
-	1. sizeは省略できない
+	1. sizeは省略できない  
+	<br>
+	=> 4
+	<br>
 
 1. NUMBER(p,s)型の説明として誤っているものを次の中から選びなさい．
 
 	1. pは精度であり、10進数桁の総数を表す．指定範囲は1<=p<=38である
 	1. sは位取りで、小数点以下の桁数を表す．指定範囲は-84<=s<=127である
 	1. NUMBER(p)とすると、小数点データは格納できない
-	1. pは省略できない
+	1. pは省略できない  
+	<br>
+	=> 4
+	<br>
 
 1. UNIQUE制約の定義でエラーになる文を2つ選びなさい．
 
@@ -60,7 +78,10 @@
 	unique(bank\_no,accout\_no),account_no number(6));
 	1. create table emp (bank\_no number(3), account\_no  
 	number(6), constraint emp\_bank\_no\_account\_no_uq  
-	unique(bank\_no,account_no));
+	unique(bank\_no,account_no));  
+	<br>
+	=> 3, 5
+	<br>
 
 1. PRIMARY KEY制約の定義でエラーになる文を選びなさい．
 
@@ -71,7 +92,10 @@
 	emp\_ename_uq primary key(empno));
 	1. create table emp (bank_no number(3),acount_no  
 	number(6), constraint emp\_bank_no_account\_no_uq  
-	primary key(bank\_no,accoun_no));
+	primary key(bank\_no,accoun_no));  
+	<br>
+	=> 2
+	<br>
 
 1. FOREIGN KEY制約を定義したい．DEPTNO列がDEPT表の主キーである  
 場合、エラーになる文を選びなさい．
@@ -85,7 +109,10 @@
 	dept(deptno));
 	1. create table emp (deptno number(6), constraint  
 	deptno_fk foreign key(deptno) references  
-	dept(deptno));
+	dept(deptno));  
+	<br>
+	=> 3
+	<br>
 
 1. CHECK制約を定義したい．正常に実行できる文を2つ選びなさい．
 
@@ -98,7 +125,10 @@
 	1. create table emp (empno number(6) ,  
 	check(empno>sal),sal number(6));
 	1. create table emp (empno number(6) ,  
-	check(empno>rownum),sal number(6));
+	check(empno>rownum),sal number(6));  
+	<br>
+	=> 3, 4
+	<br>
 
 
 ## 11/18

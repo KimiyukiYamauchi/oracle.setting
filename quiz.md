@@ -8,7 +8,10 @@
 	1. 複雑な組合せの簡素化
 	1. パフォーマンスの向上
 	1. データの独立性の確保
-	1. 同じデータ異なるビューの提供
+	1. 同じデータ異なるビューの提供  
+	<br>
+	=> 3
+	<br>
 
 1. 複合ビューに関する説明として誤っているものを選びなさい．
 
@@ -16,7 +19,10 @@
 	1. 関数を含む
 	1. ビューを通して条件なしでINSERT、UPDATEおよびDELETE操作を  
 	実行できる
-	1. データのグループを含む
+	1. データのグループを含む  
+	<br>
+	=> 3
+	<br>
 
 1. EMP表から、部門番号(DEPTNO列)が10である部門に所属する社員の  
 情報を検索したい．ビューを作成する文として正しいものを選びなさい．
@@ -28,7 +34,10 @@
 	1. create view emp_v10 select * from emp where  
 	deptno=10;
 	1. create view emp_v10 as select * from emp where  
-	deptno=10;
+	deptno=10;  
+	<br>
+	=> 4
+	<br>
 
 1. 以下のCREATE VIEW文で定義したビューの列名として正しいものを選びなさい．
 
@@ -38,14 +47,20 @@
 	1. EMPNO ENAME SAL*12
 	1. EMPNO ENAME
 	1. EMPNO ENAME #########
-	1. エラーとなる
+	1. エラーとなる  
+	<br>
+	=> 4
+	<br>
 
 1. 順序DEPT_SEQを作成する文として正しいものを次の中から選びなさい．
 
 	1. create synonym dept_seq;
 	1. create number dept_seq;
 	1. create table dept_seq;
-	1. create sequence dept_seq;
+	1. create sequence dept_seq;  
+	<br>
+	=> 4
+	<br>
 
 1. 順序に関する説明として正しいものを3つ選びなさい．
 
@@ -54,7 +69,10 @@
 	1. 通常、主キー値の生成で使用される
 	1. 順序値もロールバックされる
 	1. システムクラッシュが発生すると、メモリにキャッシュしていた  
-	番号は欠番となる
+	番号は欠番となる  
+	<br>
+	=> 1, 3, 5
+	<br>
 
 1. 順序(DEPTNO_SEQ)を使いDEPT表にデータを作成する場合のINSERT文  
 として正しいものを選びなさい．
@@ -66,7 +84,10 @@
 	1. insert into dept(deptno,dname)  
 	values(deptno_seq.nextval,'SALES');
 	1. insert into dept(deptno,dname)  
-	values(deptno_seq(nextval),'SALES');
+	values(deptno_seq(nextval),'SALES');  
+	<br>
+	=> 3
+	<br>
 
 1. EMP表のEMPNO列とSAL列の組み合わせで、索引EMP\_SAL_IDXを作成  
 する文として正しいものを選びなさい．
@@ -74,7 +95,10 @@
 	1. create index emp\_sal_idx emp(empno,sal);
 	1. create index emp\_sal_idx emp on (empno,sal);
 	1. create index emp.emp\_sal_idx on (empno,sal);
-	1. create index emp\_sal_idx on emp(empno,sal);
+	1. create index emp\_sal_idx on emp(empno,sal);  
+	<br>
+	=> 4
+	<br>
 
 1. 索引に関する説明として誤っているものを選びなさい．
 
@@ -82,13 +106,19 @@
 	1. 外部キー列に索引を作成し、結合処理を速めることができる
 	1. NULL値は一意な索引では許可されないが、一意でない索引では  
 	許可される
-	1. 制約により自動的に作成される索引の索引名は、制約の名前となる
+	1. 制約により自動的に作成される索引の索引名は、制約の名前となる  
+	<br>
+	=> 3
+	<br>
 
 1. プライベートシノニムを削除する文として正しいものを選びなさい．
 
 	1. drop private synonym big_emp;
 	1. drop synonym big_emp;
-	1. drop public synonym big_emp;
+	1. drop public synonym big_emp;  
+	<br>
+	=> 2
+	<br>
 
 ## 11/19
 

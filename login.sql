@@ -1,4 +1,4 @@
-DEFINE _EDITOR="/usr/bin/vim"
+DEFINE _EDITOR="/usr/bin/gedit"
 set null (null)
 set  pages 30
 set linesize 200

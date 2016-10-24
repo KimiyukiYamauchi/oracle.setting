@@ -4,10 +4,18 @@ $ ./sqlplus
 ユーザ名：e16007
 パスワード：password
 
-・edで起動するエディタの変更
+・edで起動するエディタの変更(login.sqlの編集)
 $ cd ~/oracle.2016
 $ subl login.sql
 以下のように変更
 DEFINE _EDITOR="/usr/bin/vim"
         ↓
 DEFINE _EDITOR="/usr/bin/gedit"
+
+・login.sqlを再実行する
+SQL> @login.sql
+or
+オラクルサーバに接続し直す
+
+・スクリプトの実行
+SQL> @スクリプトファイル名

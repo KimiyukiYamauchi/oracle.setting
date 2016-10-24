@@ -1,0 +1,13 @@
+・オラクルサーバに接続
+$ cd ~/oracle.2016
+$ ./sqlplus
+ユーザ名：e16007
+パスワード：password
+
+・edで起動するエディタの変更
+$ cd ~/oracle.2016
+$ subl login.sql
+以下のように変更
+DEFINE _EDITOR="/usr/bin/vim"
+        ↓
+DEFINE _EDITOR="/usr/bin/gedit"

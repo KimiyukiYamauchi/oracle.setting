@@ -1,4 +1,4 @@
-DEFINE _EDITOR="/usr/bin/gedit"
+DEFINE _EDITOR="/usr/bin/subl -n -w"
 set null (null)
 set  pages 30
 set linesize 200

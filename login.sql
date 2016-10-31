@@ -21,3 +21,4 @@ col email for a10
 col region for a4
 col dname for a20
 col tname for a20
+set editfile sqlplus.sql

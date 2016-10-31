@@ -1,4 +1,3 @@
-select ename, sal, hiredate
-from employees
-where deptno = &deptno
+select length('   Oracle Server  '), length(trim('   Oracle Server   '))
+from dual
 /

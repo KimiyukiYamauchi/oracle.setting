@@ -10,7 +10,7 @@ $ subl login.sql
 以下のように変更
 DEFINE _EDITOR="/usr/bin/vim"
         ↓
-DEFINE _EDITOR="/usr/bin/gedit"
+DEFINE _EDITOR="/usr/bin/subl -n -w"
 
 ・login.sqlを再実行する
 SQL> @login.sql

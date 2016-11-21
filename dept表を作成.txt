@@ -1,0 +1,8 @@
+・departments表をコピーしてdept表を作成
+create table dept as select * from departments;
+・dept表にmgr列を追加
+alter table dept add ( mgr number(4));
+・dept表のmgr列に値を設定
+update dept set mgr = 1001 where deptno = 10;
+update dept set mgr = 1003 where deptno = 20;
+update dept set mgr = 1005 where deptno = 30;

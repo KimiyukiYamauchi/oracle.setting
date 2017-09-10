@@ -1,4 +1,4 @@
-# oracle.2016
+# oracle.setting
 本リポジトリはオラクルの授業に関する情報を共有するために使用する
 
 ## オラクルサーバへの接続するための環境設定手順
@@ -11,8 +11,8 @@
 $ sudo apt install libaio1  
 1. 「リードラインラッパー(rlwrap)」のインストール  
 $ sudo apt install rlwrap  
-1. 「[oracle.2016](https://github.com/KimiyukiYamauchi/oracle.2016.git)」を「git clone」
-  $ git clone https://github.com/KimiyukiYamauchi/oracle.2016.git (任意のディレクトリ名)  
+1. 「[oracle.setting](https://github.com/KimiyukiYamauchi/oracle.setting.git)」を「git clone」
+  $ git clone https://github.com/KimiyukiYamauchi/oracle.setting.git (任意のディレクトリ名)  
 1. cloneしたリポジトリに移動  
 1. Oracleサーバへの接続確認  
 	1. 接続のためのスクリプトを作成  

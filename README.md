@@ -3,7 +3,7 @@
 
 ## オラクルサーバへの接続するための環境設定手順
 
-1. 「[Oracleインスタントクライアントのダウンロード](http://www.oracle.com/technetwork/jp/topics/index-099943-ja.html)から以下をダウンロードし、展開。  
+1. 「[Oracleインスタントクライアントのダウンロード](http://www.oracle.com/technetwork/jp/topics/index-099943-ja.html)から以下をダウンロードし、ホームディレクトリに展開。
 「instantclient_12_1」ディレクトリが作成されていることを確認
 	* instantclient-basic-linux.x64-12.1.0.2.0.zip
 	* instantclient-sqlplus-linux.x64-12.1.0.1.0.zip  
@@ -21,8 +21,8 @@ $ subl sqlplus.sh<br >
 「instantclient_12_1」ディレクトリのパスを各自の環境に  
 合わせて修正  
 ::: ここから :::  
-LD_LIBRARY_PATH=/home/(yamauchi)/instantclient_12_1  
-PATH=/home/(yamauchi)/instantclient_12_1:$PATH  
+LD_LIBRARY_PATH=/home/(各自の環境)/instantclient_12_1
+PATH=/home/(各自の環境)/instantclient_12_1:$PATH  
 NLS_LANG=JAPANESE_JAPAN.AL32UTF8  
 export LD_LIBRARY_PATH PATH NLS_LANG  
 export no_proxy=localhost,192.168.30.4  

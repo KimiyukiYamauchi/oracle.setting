@@ -21,8 +21,8 @@ $ subl sqlplus.sh<br >
 「instantclient_12_1」ディレクトリのパスを各自の環境に  
 合わせて修正  
 ::: ここから :::  
-LD_LIBRARY_PATH=/home/(各自の環境)/instantclient_12_1
-PATH=/home/(各自の環境)/instantclient_12_1:$PATH  
+LD_LIBRARY_PATH=/home/(各自の環境)/instantclient_12_1  
+PATH=/home/(各自の環境)/instantclient_12_1:$PATH  
 NLS_LANG=JAPANESE_JAPAN.AL32UTF8  
 export LD_LIBRARY_PATH PATH NLS_LANG  
 export no_proxy=localhost,192.168.30.4  

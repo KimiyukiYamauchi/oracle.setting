@@ -4,9 +4,9 @@
 ## オラクルサーバへの接続するための環境設定手順
 
 1. 「[Oracleインスタントクライアントのダウンロード](http://www.oracle.com/technetwork/jp/topics/index-099943-ja.html)から以下をダウンロードし、ホームディレクトリに展開。
-「instantclient_12_1」ディレクトリが作成されていることを確認
-	* instantclient-basic-linux.x64-12.1.0.2.0.zip
-	* instantclient-sqlplus-linux.x64-12.1.0.1.0.zip  
+「instantclient_18_3」ディレクトリが作成されていることを確認
+	* instantclient-basic-linux.x64-18.3.0.0.0dbru.zip
+	* instantclient-sqlplus-linux.x64-18.3.0.0.0dbru.zip
 1. 「非同期IO(libio)」のインストール  
 $ sudo apt install libaio1  
 1. 「リードラインラッパー(rlwrap)」のインストール  
@@ -18,21 +18,21 @@ $ sudo apt install rlwrap
 	1. 接続のためのスクリプトを作成  
 $ subl sqlplus.sh<br >
 で、ファイルを開き、修正。  
-「instantclient_12_1」ディレクトリのパスを各自の環境に  
+「instantclient_18_3」ディレクトリのパスを各自の環境に  
 合わせて修正  
 ::: ここから :::  
-LD_LIBRARY_PATH=/home/(各自の環境)/instantclient_12_1  
-PATH=/home/(各自の環境)/instantclient_12_1:$PATH  
+LD_LIBRARY_PATH=/home/(各自の環境)/instantclient_18_3  
+PATH=/home/(各自の環境)/instantclient_18_3:$PATH  
 NLS_LANG=JAPANESE_JAPAN.AL32UTF8  
 export LD_LIBRARY_PATH PATH NLS_LANG  
-export no_proxy=localhost,192.168.30.4  
+export no_proxy=localhost,172.16.40.4  
 echo -n "ユーザ名："  
 read user  
 stty -echo  
 echo -n "パスワード："  
 read pass  
 stty echo  
-rlwrap sqlplus $user/$pass@192.168.30.4:1521/db11  
+rlwrap sqlplus $user/$pass@172.16.40.4:1521/db11  
 ::: ここまで :::
 	2. 作成したスクリプトを実行し、接続できること  
 $ ./sqlplus.sh  

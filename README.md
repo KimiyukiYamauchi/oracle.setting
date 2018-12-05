@@ -16,7 +16,7 @@ $ sudo apt install rlwrap
 1. cloneしたリポジトリに移動  
 1. Oracleサーバへの接続確認  
 	1. 接続のためのスクリプトを作成  
-$ subl sqlplus.sh<br >
+$ vi sqlplus.sh<br >
 で、ファイルを開き、修正。  
 「instantclient_18_3」ディレクトリのパスを各自の環境に  
 合わせて修正  

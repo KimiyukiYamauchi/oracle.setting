@@ -1,4 +1,4 @@
-DEFINE _EDITOR="/usr/bin/subl -n -w"
+DEFINE _EDITOR="/usr/bin/vi"
 set null (null)
 set  pages 30
 set linesize 200

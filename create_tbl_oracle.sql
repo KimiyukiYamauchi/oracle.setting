@@ -86,10 +86,10 @@ INSERT INTO salgrades VALUES ('E',460001,999999);
 
 CREATE TABLE customers
 	(custno 	NUMBER(5) CONSTRAINT cust_pk PRIMARY KEY,
- 	 cname 		VARCHAR2(20),
-	 address	VARCHAR2(30),
+ 	 cname 		VARCHAR2(40),
+	 address	VARCHAR2(50),
 	 phone		VARCHAR2(12),
-	 credit_rating	VARCHAR2(6));
+	 credit_rating	VARCHAR2(12));
 
 INSERT INTO customers VALUES (1000,'品川商事','東京都港区１−ｘ−ｘ','03-1234-xxxx','優良');
 INSERT INTO customers VALUES (1001,'横浜商店','横浜市磯子区２−ｘ−ｘ','045-753-xxxx','要注意');
@@ -144,7 +144,7 @@ CREATE TABLE orders
 	 date_ordered	DATE,
 	 date_shipped	DATE,
 	 salesman_no	NUMBER(4) CONSTRAINT ord_emp_fk REFERENCES employees(empno),
-	 payment_type	VARCHAR2(10));
+	 payment_type	VARCHAR2(20));
 
 INSERT INTO orders VALUES (1,1001,'2009-12-20','2003-12-27',1003,'クレジット');
 INSERT INTO orders VALUES (2,1001,'2009-12-21','2003-12-27',1003,'クレジット');

@@ -4,9 +4,10 @@
 ## オラクルサーバへの接続するための環境設定手順
 
 1. 「[Oracleインスタントクライアントのダウンロード](http://www.oracle.com/technetwork/jp/topics/index-099943-ja.html)から以下をダウンロードし、ホームディレクトリに展開。
-「instantclient_18_3」ディレクトリが作成されていることを確認
-	* instantclient-basic-linux.x64-18.3.0.0.0dbru.zip
-	* instantclient-sqlplus-linux.x64-18.3.0.0.0dbru.zip
+「instantclient_19_5」ディレクトリが作成されていることを確認
+
+/home/application/Downloads/instantclient-basic-linux.x64-19.5.0.0.0dbru.zip
+/home/application/Downloads/instantclient-sqlplus-linux.x64-19.5.0.0.0dbru.zip
 1. 「非同期IO(libio)」のインストール  
 $ sudo apt install libaio1  
 1. 「リードラインラッパー(rlwrap)」のインストール  

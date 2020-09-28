@@ -146,19 +146,19 @@ CREATE TABLE orders2
 	 salesman_no	NUMBER(4) CONSTRAINT ord_emp_fk2 REFERENCES employees2(empno),
 	 payment_type	VARCHAR2(20));
 
-INSERT INTO orders2 VALUES (1,1001,'2009-12-20','2003-12-27',1003,'クレジット');
-INSERT INTO orders2 VALUES (2,1001,'2009-12-21','2003-12-27',1003,'クレジット');
-INSERT INTO orders2 VALUES (3,1001,'2010-01-10','2004-01-17',1003,'クレジット');
-INSERT INTO orders2 VALUES (4,1002,'2010-01-11','2004-01-18',1010,'クレジット');
-INSERT INTO orders2 VALUES (5,1008,'2010-01-15','2004-01-22',1003,'クレジット');
-INSERT INTO orders2 VALUES (6,1005,'2010-01-20','2004-01-27',1003,'クレジット');
-INSERT INTO orders2 VALUES (7,1007,'2010-01-22','2004-01-29',1006,'クレジット');
-INSERT INTO orders2 VALUES (8,1006,'2010-01-22','2004-01-29',1010,'現金');
-INSERT INTO orders2 VALUES (9,1007,'2010-01-25','2004-02-03',1006,'クレジット');
-INSERT INTO orders2 VALUES (10,1003,'2010-02-15','2004-02-22',1003,'クレジット');
-INSERT INTO orders2 VALUES (11,1007,'2010-02-20','2004-02-27',1006,'クレジット');
-INSERT INTO orders2 VALUES (12,1006,'2010-03-16',null,1010,'現金');
-INSERT INTO orders2 VALUES (13,1009,'2010-04-02',null,1006,'現金');
+INSERT INTO orders2 VALUES (1,1001,to_date('2009-12-20','yyyy-mm-dd'),to_date('2003-12-27','yyyy-mm-dd'),1003,'クレジット');
+INSERT INTO orders2 VALUES (2,1001,to_date('2009-12-21','yyyy-mm-dd'),to_date('2003-12-27','yyyy-mm-dd'),1003,'クレジット');
+INSERT INTO orders2 VALUES (3,1001,to_date('2010-01-10','yyyy-mm-dd'),to_date('2004-01-17','yyyy-mm-dd'),1003,'クレジット');
+INSERT INTO orders2 VALUES (4,1002,to_date('2010-01-11','yyyy-mm-dd'),to_date('2004-01-18','yyyy-mm-dd'),1010,'クレジット');
+INSERT INTO orders2 VALUES (5,1008,to_date('2010-01-15','yyyy-mm-dd'),to_date('2004-01-22','yyyy-mm-dd'),1003,'クレジット');
+INSERT INTO orders2 VALUES (6,1005,to_date('2010-01-20','yyyy-mm-dd'),to_date('2004-01-27','yyyy-mm-dd'),1003,'クレジット');
+INSERT INTO orders2 VALUES (7,1007,to_date('2010-01-22','yyyy-mm-dd'),to_date('2004-01-29','yyyy-mm-dd'),1006,'クレジット');
+INSERT INTO orders2 VALUES (8,1006,to_date('2010-01-22','yyyy-mm-dd'),to_date('2004-01-29','yyyy-mm-dd'),1010,'現金');
+INSERT INTO orders2 VALUES (9,1007,to_date('2010-01-25','yyyy-mm-dd'),to_date('2004-02-03','yyyy-mm-dd'),1006,'クレジット');
+INSERT INTO orders2 VALUES (10,1003,to_date('2010-02-15','yyyy-mm-dd'),to_date('2004-02-22','yyyy-mm-dd'),1003,'クレジット');
+INSERT INTO orders2 VALUES (11,1007,to_date('2010-02-20','yyyy-mm-dd'),to_date('2004-02-27','yyyy-mm-dd'),1006,'クレジット');
+INSERT INTO orders2 VALUES (12,1006,to_date('2010-03-16','yyyy-mm-dd'),null,1010,'現金');
+INSERT INTO orders2 VALUES (13,1009,to_date('2010-04-02','yyyy-mm-dd'),null,1006,'現金');
 
 CREATE TABLE ord_details2
 	(ordno		NUMBER(8)   CONSTRAINT ord_det_ord_fk2 REFERENCES orders2(ordno),

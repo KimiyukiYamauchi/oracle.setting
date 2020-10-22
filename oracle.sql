@@ -18,7 +18,7 @@ CREATE TABLE departments
 	dname VARCHAR2(14) ,
 	loc VARCHAR2(10) ) ;
 
-CREATE TABLE employees2
+CREATE TABLE employees
        (empno NUMBER(4) CONSTRAINT pk_emp PRIMARY KEY,
 	ename VARCHAR2(10),
 	yomi VARCHAR2(20),
